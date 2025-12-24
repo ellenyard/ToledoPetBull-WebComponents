@@ -1,0 +1,902 @@
+/*
+Theme Name: Astra Child
+Theme URI: https://toledospetbullproject.com
+Description: Custom child theme for Toledo's Pet Bull Project with performance optimizations
+Author: Toledo's Pet Bull Project
+Author URI: https://toledospetbullproject.com
+Template: astra
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: astra-child
+*/
+
+/* ===========================================
+   PARTNER LOGOS MARQUEE ANIMATION
+   =========================================== */
+.logo-marquee {
+    overflow: hidden;
+    width: 100%;
+    background: #fff;
+}
+.logo-track {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    animation: scroll-logos 10s linear infinite;
+}
+.partner-logo {
+    min-width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+}
+.partner-logo img {
+    height: 180px;
+    object-fit: contain;
+    padding: 10px 18px;
+    width: auto;
+    max-width: 340px;
+}
+@keyframes scroll-logos {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* ===========================================
+   MISSION STATEMENT SECTION FONT
+   =========================================== */
+.mission-statement {
+    font-family: Arial, sans-serif;
+}
+
+/* ===========================================
+   HERO CAROUSEL STYLES
+   =========================================== */
+.hero-carousel {
+    position: relative;
+    width: 100vw;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 0;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    margin-bottom: 40px;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-slide.active {
+    opacity: 1;
+}
+
+.carousel-image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.carousel-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(40,40,40,0.35) 0%, rgba(40,40,40,0.18) 50%, rgba(40,40,40,0.05) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 60px;
+}
+
+.carousel-content {
+    text-align: left;
+    color: white;
+    max-width: 500px;
+    padding: 20px;
+}
+
+.carousel-content h1 {
+    font-size: 2.8rem;
+    font-weight: 900;
+    margin-bottom: 15px;
+    text-shadow: 3px 3px 8px rgba(0,0,0,0.9);
+    color: white;
+    line-height: 1.2;
+}
+
+.carousel-content p {
+    font-size: 1.3rem;
+    margin-bottom: 25px;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.9);
+    font-weight: 500;
+}
+
+.carousel-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot.active,
+.dot:hover {
+    background: white;
+    transform: scale(1.2);
+}
+
+/* Create a new stacking context for the hero so nothing outside sits above it */
+.hero-carousel { 
+    isolation: isolate; 
+    position: relative; 
+    z-index: 0; 
+}
+
+/* Keep slide chrome non-interactive unless explicitly allowed */
+.carousel-slide,
+.carousel-image,
+.carousel-overlay,
+.carousel-content { 
+    pointer-events: none; 
+}
+
+/* Let the CTA remain clickable and visually on top */
+.carousel-content { 
+    position: relative; 
+    z-index: 3; 
+}
+
+.cta-btn {
+    background: #7AC142;
+    color: white;
+    padding: 18px 35px;
+    border: none;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    pointer-events: auto;
+}
+
+.cta-btn:hover {
+    background: #5A9B32;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+@media (max-width: 768px) {
+    .hero-carousel {
+        width: 100%;
+        height: 400px;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 20px;
+        border-radius: 10px;
+    }
+    
+    .carousel-overlay {
+        padding-left: 30px;
+        background: linear-gradient(135deg, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.18) 100%);
+    }
+    
+    .carousel-content {
+        padding: 15px;
+        max-width: 90%;
+    }
+    
+    .carousel-content h1 {
+        font-size: 2.2rem;
+        margin-bottom: 12px;
+        font-weight: 900;
+    }
+    
+    .carousel-content p {
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+        font-weight: 500;
+    }
+
+    .cta-btn {
+        padding: 16px 30px;
+        font-size: 1rem;
+        font-weight: 700;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-carousel {
+        height: 350px;
+    }
+    
+    .carousel-overlay {
+        padding-left: 20px;
+    }
+    
+    .carousel-content h1 {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+    }
+    
+    .carousel-content p {
+        font-size: 1rem;
+        margin-bottom: 18px;
+    }
+    
+    .cta-btn {
+        padding: 15px 25px;
+        font-size: 0.95rem;
+        width: auto;
+    }
+}
+
+/* ===========================================
+   SECTION HEADING STYLES - UNDERLINED
+   =========================================== */
+.section-heading, h2.section-heading {
+    color: #5A9B32 !important;
+    margin-top: 40px !important;
+    margin-bottom: 20px !important;
+    padding-bottom: 10px !important;
+    border-bottom: 3px solid #7AC142 !important;
+    font-size: 1.8em !important;
+    font-weight: bold !important;
+}
+
+@media (max-width: 768px) {
+    .section-heading, h2.section-heading {
+        font-size: 1.5em !important;
+        margin-top: 30px !important;
+    }
+}
+
+/* ===========================================
+   HIDE VARIOUS UI ELEMENTS
+   =========================================== */
+/* Remove Add-to-Calendar / Export UI */
+.tribe-events-c-subscribe,
+.tribe-events-c-subscribe-dropdown,
+.tribe-events-subscribe-dropdown,
+.tribe-events-ical,
+.tribe-events-gcal,
+.tribe-events-export {
+    display: none !important;
+}
+
+/* Remove star ratings in Shop */
+.star-rating, .woocommerce-product-rating {
+    display: none !important;
+}
+
+/* Hide cart icon by default */
+body:not(.woocommerce):not(.woocommerce-page) .ast-header-woo-cart {
+    display: none !important;
+}
+
+/* ===========================================
+   STICKY HEADER (DESKTOP/TABLET ONLY)
+   =========================================== */
+@media (min-width: 769px) {
+    #masthead {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        z-index: 9999 !important;
+        background: #ffffff !important;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1) !important;
+        transition: all 0.3s ease !important;
+    }
+
+    body {
+        padding-top: 100px !important;
+    }
+}
+
+/* Mobile devices (768px and below) - NO sticky header */
+@media (max-width: 768px) {
+    #masthead {
+        position: relative !important;
+    }
+    
+    body {
+        padding-top: 0 !important;
+    }
+}
+
+/* ===========================================
+   SMOOTH SCROLLING
+   =========================================== */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ===========================================
+   REUSABLE BUTTON SYSTEM
+   =========================================== */
+.primary-btn {
+    background: #5A9B32;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.primary-btn:hover {
+    background: #7AC142;
+}
+
+.secondary-btn {
+    background: white;
+    color: #5A9B32;
+    border: 2px solid #5A9B32;
+    padding: 10px 25px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.secondary-btn:hover {
+    background: #5A9B32;
+    color: white;
+}
+
+.info-btn {
+    background: #7AC142;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.info-btn:hover {
+    background: #5A9B32;
+}
+
+.expand-btn {
+    background: #5A9B32;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.expand-btn:hover {
+    background: #7AC142;
+}
+
+/* ===========================================
+   REUSABLE CONTACT INFO BOXES
+   =========================================== */
+.contact-info {
+    background: #F6F1E7;
+    border-radius: 8px;
+    padding: 12px;
+    margin: 15px 0;
+    text-align: center;
+    border: 1px solid #E0E0E0;
+}
+
+.contact-info strong {
+    color: #5A9B32;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contact-info a {
+    color: #5A9B32;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.contact-info a:hover {
+    color: #7AC142;
+}
+
+/* ===========================================
+   REUSABLE CARD SYSTEM
+   =========================================== */
+.card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #E0E0E0;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+}
+
+.card-image {
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.card-content {
+    padding: 25px;
+}
+
+.card-title {
+    font-weight: bold;
+    color: #222222;
+    margin-bottom: 12px;
+}
+
+.card-description {
+    color: #333333;
+    margin-bottom: 18px;
+    line-height: 1.5;
+}
+
+.card-highlights {
+    background: #F6F1E7;
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 20px;
+    color: #333333;
+}
+
+.card-highlights strong {
+    color: #5A9B32;
+}
+
+.highlight-tag {
+    background: #F6F1E7;
+    color: #5A9B32;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border: 1px solid #E0E0E0;
+    display: inline-block;
+    margin-right: 8px;
+    margin-bottom: 8px;
+}
+
+.card-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #7AC142;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+/* ===========================================
+   REUSABLE MODAL SYSTEM
+   =========================================== */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 800px;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+}
+
+.close-button {
+    color: #999;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-button:hover {
+    color: #5A9B32;
+}
+
+.modal h2 {
+    color: #222222;
+    margin-bottom: 20px;
+    padding-right: 40px;
+}
+
+/* ===========================================
+   REUSABLE PAGE HEADER
+   =========================================== */
+.page-header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.page-header h1 {
+    color: #222222;
+    margin-bottom: 15px;
+}
+
+.page-header p {
+    color: #333333;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* ===========================================
+   REUSABLE INFO BOXES
+   =========================================== */
+.info-box {
+    background: #F6F1E7;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 20px 0;
+    border-left: 4px solid #7AC142;
+}
+
+.info-box strong {
+    color: #5A9B32;
+}
+
+/* ===========================================
+   REUSABLE TABLES
+   =========================================== */
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.styled-table th,
+.styled-table td {
+    border: 1px solid #E0E0E0;
+    padding: 12px;
+    text-align: left;
+}
+
+.styled-table th {
+    background-color: #7AC142;
+    color: white;
+    font-weight: bold;
+}
+
+.styled-table tr:nth-child(even) {
+    background-color: #F6F1E7;
+}
+
+.styled-table a {
+    color: #5A9B32;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.styled-table a:hover {
+    color: #7AC142;
+    text-decoration: underline;
+}
+
+/* ===========================================
+   REUSABLE ANIMATIONS
+   =========================================== */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.slide-down {
+    animation: slideDown 0.3s ease-out;
+}
+
+/* ===========================================
+   SPONSOR/PARTNER LOGOS
+   =========================================== */
+.partner-logos-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.partner-logos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    align-items: center;
+    justify-items: center;
+}
+
+.partner-logo {
+    background: none;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
+    transition: none;
+    width: auto;
+    max-width: none;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.partner-logo:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.partner-logo img {
+    max-width: 100%;
+    max-height: 100px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    transition: opacity 0.3s ease;
+}
+
+.partner-logo:hover img {
+    opacity: 0.9;
+}
+
+.partner-logo a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.sponsor-logos img {
+    max-height: 100px !important;
+    width: auto !important;
+    object-fit: contain !important;
+}
+
+@media (max-width: 768px) {
+    .partner-logos-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+    }
+    
+    .partner-logo {
+        max-width: 200px;
+        height: 120px;
+        padding: 15px;
+    }
+    
+    .partner-logo img {
+        max-height: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .partner-logos-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 15px;
+    }
+    
+    .partner-logo {
+        max-width: 180px;
+        height: 100px;
+        padding: 12px;
+    }
+    
+    .partner-logo img {
+        max-height: 70px;
+    }
+}
+
+/* ===========================================
+   REUSABLE GRID LAYOUTS
+   =========================================== */
+.programs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+@media (max-width: 768px) {
+    .programs-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+/* ===========================================
+   BOARD OF DIRECTORS PAGE
+   =========================================== */
+.board-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.board-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 350px));
+    gap: 30px;
+    margin-bottom: 40px;
+    justify-content: center;
+}
+
+.board-member {
+    background: white;
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.member-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 15px;
+    display: block;
+    border: 3px solid #7AC142;
+}
+
+.placeholder-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #E0E0E0;
+    margin: 0 auto 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-style: italic;
+    border: 3px solid #7AC142;
+}
+
+.member-name {
+    color: #222222;
+    font-size: 1.3em;
+    font-weight: bold;
+    margin: 10px 0 5px;
+}
+
+.member-title {
+    color: #7AC142;
+    font-weight: bold;
+    margin: 0 0 15px;
+    font-size: 1.1em;
+}
+
+.bio-short {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.bio-full {
+    display: none;
+    text-align: left;
+    margin-top: 10px;
+}
+
+.read-more-link {
+    color: #5A9B32;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.read-more-link:hover {
+    color: #7AC142;
+}
+
+@media (max-width: 768px) {
+    .board-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .member-photo, .placeholder-photo {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/* ===========================================
+   CHECKMARK LIST HELPER
+   =========================================== */
+.checkmark-list {
+    list-style: none;
+    padding: 0;
+}
+
+.checkmark-list li {
+    padding: 5px 0;
+    padding-left: 20px;
+    position: relative;
+}
+
+.checkmark-list li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #7AC142;
+    font-weight: bold;
+}
