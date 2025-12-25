@@ -1,0 +1,198 @@
+<!-- wp:html -->
+<style>
+    .trainers-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .page-title {
+        color: #222222;
+        text-align: center;
+        margin-bottom: 40px;
+        font-size: 2.5em;
+    }
+
+    .trainers-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 350px));
+        gap: 30px;
+        margin-bottom: 40px;
+        justify-content: center;
+    }
+
+    .trainer-card {
+        background: white;
+        border: 1px solid #E0E0E0;
+        border-radius: 8px;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .trainer-photo {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin: 0 auto 15px;
+        display: block;
+        border: 3px solid #7AC142;
+    }
+
+    .trainer-name {
+        color: #222222;
+        font-size: 1.3em;
+        font-weight: bold;
+        margin: 10px 0 5px;
+    }
+
+    .trainer-credentials {
+        color: #7AC142;
+        font-weight: bold;
+        margin: 0 0 15px;
+        font-size: 0.95em;
+        line-height: 1.4;
+    }
+
+    .bio-short {
+        text-align: left;
+        margin-bottom: 10px;
+        line-height: 1.6;
+    }
+
+    .bio-full {
+        display: none;
+        text-align: left;
+        margin-top: 10px;
+        line-height: 1.6;
+    }
+
+    .bio-full.show {
+        display: block;
+    }
+
+    .read-more-link {
+        color: #5A9B32;
+        cursor: pointer;
+        font-weight: bold;
+        text-decoration: underline;
+        display: inline-block;
+        margin-top: 10px;
+    }
+
+    .read-more-link:hover {
+        color: #7AC142;
+    }
+
+    @media (max-width: 768px) {
+        .trainers-grid {
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+        
+        .trainer-photo {
+            width: 150px;
+            height: 150px;
+        }
+
+        .page-title {
+            font-size: 2em;
+        }
+    }
+</style>
+
+<div class="trainers-container">
+    <h1 class="page-title">Meet Our Certified Trainers</h1>
+    
+    <div class="trainers-grid">
+        <!-- Nancy Kloss -->
+        <div class="trainer-card">
+            <img src="https://toledospetbullproject.com/wp-content/uploads/2025/04/nancy.webp" 
+                 alt="Nancy Kloss sitting on the grass with two dogs" 
+                 class="trainer-photo">
+            <h2 class="trainer-name">Nancy Kloss</h2>
+            <p class="trainer-credentials">BA, CPDT-KA, CPR</p>
+            <div class="bio-short">
+                <p>Nancy Kloss is certified through the Council of Certified Professional Dog Trainers nationwide. She has been training since 2001, when her mission was to help rescues with behavior issues.</p>
+            </div>
+            <div class="bio-full" id="nancy-full">
+                <p>Her inspiration came from training her own dog, "Tia, her beloved Boxer/Bulldog" who struggled with fearful and reactive issues.</p>
+                <p>Nancy takes pride in teaching positive reinforcement/force-free methods. She feels it is the best way to build confidence, trust, and enhance the human-canine bond. Nancy believes that Dog Training should be a positive experience that teaches the dog to think for itself, and to choose the right path to succeed. Her style is to utilize motivational techniques to teach in a calm and collected way.</p>
+                <p>Her roots stem from helping those with anxiety, separation, reactivity, and fearful behaviors.</p>
+                <p>Nancy teaches good manners classes along with puppy socializing classes. She also offers one-on-one private lessons and consultations.</p>
+                <p>In addition to teaching, Nancy has fostered and placed over 200 dogs and puppies, including hospice, critical care, behavior issues, and handicapped dogs of all breeds, ages, and sizes.</p>
+                <p>She is also certified in CPR for Dogs Society.</p>
+            </div>
+            <span class="read-more-link" onclick="toggleBio('nancy')">Read More</span>
+        </div>
+
+        <!-- Max Machon -->
+        <div class="trainer-card">
+            <img src="https://toledospetbullproject.com/wp-content/smush-webp/2025/09/Max-Machon-board.jpeg.webp" 
+                 alt="Max Machon kneeling down next to four dogs" 
+                 class="trainer-photo">
+            <h2 class="trainer-name">Max Machon</h2>
+            <p class="trainer-credentials">BA-PSY, KPA-CTP, CCPDT-KSA<br>Certified Fear Free Trainer</p>
+            <div class="bio-short">
+                <p>With over 9 years of experience, Max has honed his expertise in dog training, committed to fostering stronger connections between canines and their human companions.</p>
+            </div>
+            <div class="bio-full" id="max-full">
+                <p>Holding a Bachelor's degree in Psychology from the University of Toledo, Max is a distinguished graduate and Certified Training Partner of the Karen Pryor Academy, along with being a Certified Professional Dog Trainer Knowledge and Skills assessed accredited by the Certification Council for Professional Dog Trainers. Additionally, Max boasts certification as a Fear Free Professional and has completed the esteemed Aggression in Dogs Master Course by Michael Shikashlo.</p>
+                <p>His versatile background spans various realms of the dog world, from orchestrating engaging playgroups for daycares and shelters to nurturing and grooming young puppies. Max's dedication extends to conducting behavior assessments for local rescues and serving as a foster parent. Passionate about education, he actively contributes to community outreach efforts, delivering insightful presentations on dog-related topics at local correctional facilities through Toledo's PET Bull Project. Max also spearheads the Teachers' PET class, empowering local teens to train foster care dogs.</p>
+                <p>Beyond his professional pursuits, Max finds joy in outdoor adventures, relishing walks and hikes with his beloved canine companions, Clover, Lilly, and Ash. He dedicates time to Rally Obedience training and husbandry practices. An avid enthusiast of nature, he explores the scenic landscapes of the U.S. through backpacking expeditions and embraces his musical side through guitar playing during his leisure moments.</p>
+            </div>
+            <span class="read-more-link" onclick="toggleBio('max')">Read More</span>
+        </div>
+
+        <!-- Cory Cripe -->
+        <div class="trainer-card">
+            <img src="https://toledospetbullproject.com/wp-content/uploads/2025/04/rsw_600cg_true-2.webp" 
+                 alt="Cory Cripe wearing a bucket hat sits at a wooden table indoors, holding two dogs on his lap" 
+                 class="trainer-photo">
+            <h2 class="trainer-name">Cory Cripe</h2>
+            <p class="trainer-credentials">KPA-CTP, CCPDT-KA<br>Fear Free Certified Trainer</p>
+            <div class="bio-short">
+                <p>Cory has been working with and training dogs for over 4 years. His passion is helping people and dogs learn to communicate with each other and live together in understanding and compassion.</p>
+            </div>
+            <div class="bio-full" id="cory-full">
+                <p>Assessed through the Certification Council for Professional Dog Trainers, a Certified Training Partner at Karen Pryor Academy and a Certified Fear Free Professional, Cory is the only Family Paws Certified Educator in Northwest Ohio! He believes education and learning are the basis for us to better engage ourselves with our animals.</p>
+                <p>When Cory is not helping people and dogs communicate, he enjoys spending time with his girlfriend, Mechelle, and his two dogs, Coda and Fidget. He has two turtles and takes great pride in decorating their tank with different themes. Enjoys backcountry backpacking, landscaping, and tying knots in paracord.</p>
+            </div>
+            <span class="read-more-link" onclick="toggleBio('cory')">Read More</span>
+        </div>
+
+        <!-- Megan Reynolds -->
+        <div class="trainer-card">
+            <img src="https://toledospetbullproject.com/wp-content/uploads/2025/04/rsw_600cg_true-3.webp" 
+                 alt="Megan Reynolds sitting on a picnic table in a forest, hugging a black and white dog" 
+                 class="trainer-photo">
+            <h2 class="trainer-name">Megan Reynolds</h2>
+            <p class="trainer-credentials">CCPDT-KA<br>Fear Free Certified Trainer</p>
+            <div class="bio-short">
+                <p>Megan is a Certified Professional Dog Trainer - Knowledge Assessed through the Certification Council for Professional Dog Trainers, has completed Karen Pryor Academy's Dog Training Foundations Course, and is a Fear Free Shelters Graduate.</p>
+            </div>
+            <div class="bio-full" id="megan-full">
+                <p>Megan currently works at Hartman Veterinary Hospital as a veterinary assistant. Education is one of Megan's passions, and she enjoys helping clients understand how health and training come together to affect an animal's behaviors. Throughout her life, Megan has worked for the Toledo Animal Rescue, where she trained the shelter dogs, helping them learn good manners and behaviors to make them more adoptable. She also worked as a veterinary assistant at Westside Veterinary Hospital. Megan has also worked in multiple doggie daycares, running playgroups, and worked in a canine hydrotherapy clinic. Megan has a passion for and has been involved with the rescue world from a young age. Her family has adopted and fostered dogs since she was a young girl.</p>
+                <p>When not working with shelter dogs or assisting with group classes and private training, Megan enjoys hiking with her dog Ivy, reading a good science fiction book, and binge-watching Gilmore Girls.</p>
+            </div>
+            <span class="read-more-link" onclick="toggleBio('megan')">Read More</span>
+        </div>
+    </div>
+</div>
+
+<script>
+    function toggleBio(trainerId) {
+        const bioFull = document.getElementById(trainerId + '-full');
+        const link = event.target;
+        
+        if (bioFull.classList.contains('show')) {
+            bioFull.classList.remove('show');
+            link.textContent = 'Read More';
+        } else {
+            bioFull.classList.add('show');
+            link.textContent = 'Read Less';
+        }
+    }
+</script>
+<!-- /wp:html -->
