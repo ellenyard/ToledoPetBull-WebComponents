@@ -1,0 +1,222 @@
+<!-- wp:html -->
+<style>
+/* Education Page - Only page-specific styles */
+.toledo-education {
+    line-height: 1.6;
+    color: #333333;
+}
+
+
+.card-icon {
+    font-size: 1.3rem;
+}
+
+.card-details {
+    display: none;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 2px solid #E0E0E0;
+}
+
+.card-details.show {
+    display: block;
+    animation: slideDown 0.3s ease-out;
+}
+
+/* Use .slide-down class from Additional CSS for the animation */
+
+.details-list {
+    list-style: none;
+    padding: 0;
+}
+
+.details-list li {
+    padding: 8px 0;
+    padding-left: 25px;
+    position: relative;
+    color: #333333;
+}
+
+.details-list li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #7AC142;
+    font-weight: bold;
+}
+
+.cta-section {
+    text-align: center;
+    padding: 40px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.cta-section h2 {
+    color: #222222;
+    margin-bottom: 15px;
+}
+</style>
+
+<div class="toledo-education">
+    <div class="page-header">
+        <h1>Our Education Programs</h1>
+        <p>Building empathy, promoting safe interactions, and strengthening the bond between pets and people. We partner with schools, libraries, and community groups to deliver interactive, age‑appropriate learning.</p>
+    </div>
+
+    <div class="programs-grid">
+        <!-- Teacher's PET Card -->
+        <div class="card" id="teachers-pet" onclick="toggleToledoDetails(this)">
+            <div class="card-image" style="background-image: url('https://toledospetbullproject.com/wp-content/uploads/2025/07/IMG_4518-e1756650804694.jpeg');">
+                <div class="card-badge">6 Weeks</div>
+            </div>
+            <div class="card-content">
+                <h3 class="card-title">
+                    <span class="card-icon">🎓</span>
+                    Teacher's PET
+                </h3>
+                <p class="card-description">Teens work with rescue dogs, learning training skills while helping dogs become more adoptable.</p>
+                <div class="card-highlights">
+                    <span class="highlight-tag">Ages 13-18</span>
+                    <span class="highlight-tag">Hands-on Training</span>
+                    <span class="highlight-tag">Build Confidence</span>
+                </div>
+                <button class="expand-btn">Learn More Details</button>
+                <button class="info-btn" onclick="window.location.href='https://toledospetbullproject.com/teachers-pet-intake-form/'">Enroll Now</button>
+                <div class="card-details">
+                    <ul class="details-list">
+                        <li>Weekly workshops led by professional dog trainers</li>
+                        <li>Interactive training games and exercises</li>
+                        <li>Learn core skills: sit, stay, down, leash walking</li>
+                        <li>Education on spay/neuter and preventing dog fighting</li>
+                        <li>Dogs can earn Canine Good Citizen certification</li>
+                        <li>Graduation photo keepsake included</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Humane Education Card -->
+        <div class="card" id="humane-education" onclick="toggleToledoDetails(this)">
+            <div class="card-image" style="background-image: url('https://toledospetbullproject.com/wp-content/uploads/2025/04/rsw_1280h_853-1-1-1024x682.webp');">
+                <div class="card-badge">1-2 Hours</div>
+            </div>
+            <div class="card-content">
+                <h3 class="card-title">
+                    <span class="card-icon">🏫</span>
+                    Humane Education
+                </h3>
+                <p class="card-description">Interactive classes for all ages in schools, churches, and community groups teaching safe, respectful animal interactions.</p>
+                <div class="card-highlights">
+                    <span class="highlight-tag">Group Classes</span>
+                    <span class="highlight-tag">Safety Focus</span>
+                    <span class="highlight-tag">Build Empathy</span>
+                </div>
+                <button class="expand-btn">Learn More Details</button>
+                <div class="card-details">
+                    <ul class="details-list">
+                        <li>How to safely greet unfamiliar dogs</li>
+                        <li>What to do if approached by a stray</li>
+                        <li>Understanding the impact of dog fighting on communities</li>
+                        <li>How media and laws shape perceptions of dogs</li>
+                        <li>Available for schools, churches, and community groups</li>
+                        <li>Interactive sessions build compassion and understanding</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pet Safety Card -->
+        <div class="card" id="pet-safety" onclick="toggleToledoDetails(this)">
+            <div class="card-image" style="background-image: url('https://toledospetbullproject.com/wp-content/uploads/2025/10/Pet-Safety.jpg');">
+                <div class="card-badge">1-2 Hours</div>
+            </div>
+            <div class="card-content">
+                <h3 class="card-title">
+                    <span class="card-icon">🛡️</span>
+                    Pet Safety
+                </h3>
+                <p class="card-description">Fun classes for all ages focused on preventing bites and teaching safe interactions through games and activities.</p>
+                <div class="card-highlights">
+                    <span class="highlight-tag">Bite Prevention</span>
+                    <span class="highlight-tag">Interactive Games</span>
+                    <span class="highlight-tag">Family Friendly</span>
+                </div>
+                <button class="expand-btn">Learn More Details</button>
+                <div class="card-details">
+                    <ul class="details-list">
+                        <li>How to read dog body language</li>
+                        <li>Proper greetings with pets</li>
+                        <li>Responsibilities of pet ownership (costs, time, care)</li>
+                        <li>Safety tips for families and children</li>
+                        <li>Special guidance for service professionals</li>
+                        <li>Uses games, video clips, and hands-on activities</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pawsitive Reading Card -->
+        <div class="card" id="pawsitive-reading" onclick="toggleToledoDetails(this)">
+            <div class="card-image" style="background-image: url('https://toledospetbullproject.com/wp-content/uploads/2025/10/Pawsitive-Reading.jpg');">
+                <div class="card-badge">Drop-in</div>
+            </div>
+            <div class="card-content">
+                <h3 class="card-title">
+                    <span class="card-icon">📚</span>
+                    Pawsitive Reading
+                </h3>
+                <p class="card-description">Children read aloud to dogs in a calm, supportive library or after-school setting.</p>
+                <div class="card-highlights">
+                    <span class="highlight-tag">Build Confidence</span>
+                    <span class="highlight-tag">Libraries</span>
+                </div>
+                <button class="expand-btn">Learn More Details</button>
+                <div class="card-details">
+                    <ul class="details-list">
+                        <li>Children read to Canine Good Citizen-certified dogs</li>
+                        <li>Calm, supportive environment for learning</li>
+                        <li>Boosts reading comprehension and confidence</li>
+                        <li>Builds public speaking skills</li>
+                        <li>Encourages empathy and gentle animal interactions</li>
+                        <li>Available at local libraries and after-school programs</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="cta-section">
+        <h2>Ready to Get Started?</h2>
+        <p>Contact us to schedule an education program for your school, group, or organization.</p>
+        <button class="cta-btn" onclick="window.location.href='https://toledospetbullproject.com/educational-program-request/'">Request a Program</button>
+    </div>
+</div>
+
+<script>
+function toggleToledoDetails(card) {
+    const details = card.querySelector('.card-details');
+    const button = card.querySelector('.expand-btn');
+    
+    if (details.classList.contains('show')) {
+        details.classList.remove('show');
+        button.textContent = 'Learn More Details';
+    } else {
+        // Close all other open details first
+        document.querySelectorAll('.toledo-education .card-details.show').forEach(openDetail => {
+            openDetail.classList.remove('show');
+            openDetail.parentElement.querySelector('.expand-btn').textContent = 'Learn More Details';
+        });
+        
+        details.classList.add('show');
+        button.textContent = 'Show Less';
+        
+        // Smooth scroll to keep the card in view
+        setTimeout(() => {
+            card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }, 100);
+    }
+}
+</script>
+<!-- /wp:html -->
