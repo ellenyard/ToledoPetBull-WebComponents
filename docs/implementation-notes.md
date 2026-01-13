@@ -21,16 +21,6 @@ The child theme includes:
 - Normal positioning on mobile
 - Smooth scroll enabled sitewide
 
-## Pages Converted from Beaver Builder
-- ✅ Education
-- ✅ Prevention
-- ✅ About Us
-- ✅ Board of Directors
-- ✅ Trainers
-
-## Still Using Gutenberg/Spectra
-(Add pages as you identify them)
-
 ## Development Notes
 - Using WordPress Additional CSS area for safety when testing
 - Child theme functions.php contains performance optimizations
