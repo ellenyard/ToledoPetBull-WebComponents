@@ -1,174 +1,160 @@
 <!-- wp:html -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Toledo's Pet Bull Project</title>
-</head>
-<body>
-    <div style="max-width: 1200px; margin: 0 auto; padding: 20px;">
-        
-        <!-- Hero Section using existing page-header class -->
-        <div class="page-header">
-            <h1>How We Got Started</h1>
-            <p style="font-size: 1.2em;">Toledo's Pet Bull Project was formed by passionate pit bull owners, dog enthusiasts, and trainers who saw a need in our community. We're here to prevent animal cruelty, provide education, and offer free training to promote responsible ownership and advocacy for all dog breeds.</p>
-        </div>
+<script>
+function toggleBio(element) {
+    const boardMember = element.closest('.board-member');
+    const bioShort = boardMember.querySelector('.bio-short');
+    const bioFull = boardMember.querySelector('.bio-full');
 
-        <!-- Image -->
-        <div style="text-align: center; margin: 40px 0;">
-            <img src="https://toledospetbullproject.com/wp-content/uploads/2025/05/8D399B13-43B7-41C1-AC58-FA60E50ED3A3.jpeg" alt="Toledo's Pet Bull Project community members and volunteers" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-        </div>
+    if (bioFull.style.display === 'none' || bioFull.style.display === '') {
+        bioShort.style.display = 'none';
+        bioFull.style.display = 'block';
+    } else {
+        bioShort.style.display = 'block';
+        bioFull.style.display = 'none';
+    }
+}
+</script>
+<!-- /wp:html -->
 
-        <!-- Community Section using existing card class -->
-        <div class="card" style="margin-bottom: 25px;">
-            <div class="card-content">
-                <h2 class="section-heading">Rooted in Community Spirit</h2>
-                <p>Our dedicated volunteers and trainers live right here in Toledo. We're your neighbors, and we're committed to giving back by helping dogs and their owners.</p>
-                <p>As an education-focused organization with a dog rescue program, we work closely with local veterinarians to tackle pet overpopulation and ensure every dog gets the care they deserve.</p>
+<!-- wp:html -->
+<div class="board-container">
+    <h1>Board of Directors</h1>
+
+    <div class="board-grid">
+        <!-- Marc Reinsel -->
+        <div class="board-member">
+            <div class="placeholder-photo">Photo coming soon</div>
+            <h3 class="member-name">Marc Reinsel</h3>
+            <p class="member-title">President</p>
+            <div class="bio-short">
+                <p>Marc is one of the founders of Toledo's PET Bull Project. <span class="read-more-link" onclick="toggleBio(this)">Read more</span></p>
+            </div>
+            <div class="bio-full">
+                <p>Marc is one of the founders of Toledo's PET Bull Project. He has always been a firm believer in the work that we do. In 2014 he was integral in starting the rescue portion of the organization. Marc was involved in writing the rescue manual which wrote out the policies that we use today. His responsibilities are directing and running the day to day operations of the rescue. Marc is very good with dogs and dogs respond to him very well. He does evaluations to make sure dogs are safe and healthy and ready for their forever homes. He is the current Toledo's PET Bull Project Board President and takes his role very seriously.</p>
+                <span class="read-more-link" onclick="toggleBio(this)">Read less</span>
             </div>
         </div>
 
-        <!-- Youth Education Section using existing card class -->
-        <div class="card" style="margin-bottom: 25px;">
-            <div class="card-content">
-                <h2 class="section-heading">Prioritizing Youth Education</h2>
-                <p>One of our biggest goals is stopping dog fights and helping misunderstood breeds like pit bulls. We start by teaching young people about compassion and empathy for animals.</p>
-                <p>When kids learn to treat animals with kindness, they grow up to be responsible pet owners who speak up against cruelty.</p>
-                
-                <div class="info-box">
-                    <strong>Our Focus:</strong> Combat dog fighting, promote spaying and neutering, and provide complimentary training to foster responsible ownership.
-                </div>
+        <!-- Kate McComb -->
+        <div class="board-member">
+            <div class="placeholder-photo">Photo coming soon</div>
+            <h3 class="member-name">Kate McComb</h3>
+            <p class="member-title">Secretary</p>
+            <div class="bio-short">
+                <p>Kate brings nearly two decades of experience...<span class="read-more-link" onclick="toggleBio(this)">Read more</span></p>
+            </div>
+<div class="bio-full">
+                <p>Kate brings nearly two decades of marketing experience to the Toledo's PET Bull Project board, where she supports fundraising and marketing initiatives. Her career began with Assistance Dogs of America as marketing and special events coordinator, and she has since built a diverse background spanning social media, content strategy, and community engagement. Kate shares her South Toledo home with her fiancé and their two beloved dogs, Murphy and Mickey, both rescued through the organization. Her professional expertise, combined with her personal passion for keeping dogs happy and healthy in their homes, make her a strong advocate for the work Toledo's PET Bull Project does in the community.</p>
+                <span class="read-more-link" onclick="toggleBio(this)">Read less</span>
             </div>
         </div>
 
-        <!-- Impact Section using existing card class -->
-        <div class="card" style="margin-bottom: 25px;">
-            <div class="card-content">
-                <h2 class="section-heading">Our Commitment to Real Impact</h2>
-                <p>We don't just talk about making a difference—we measure it. Every program we run is designed to create real, positive change for pets and people in Toledo.</p>
-                <p>We regularly check our data to make sure our programs are working. If something isn't making the impact we want, we change it or try something new.</p>
-                <p>Our supporters have direct access to our "Outcome Plan"—an open-source document that shows exactly how we're working toward our mission.</p>
+        <!-- Michelle Tremmel -->
+        <div class="board-member">
+            <img src="https://toledospetbullproject.com/wp-content/uploads/2025/09/Michelle-Tremmel-board.jpg" alt="Michelle Tremmel, Board Member" class="member-photo">
+            <h3 class="member-name">Michelle Tremmel</h3>
+            <p class="member-title">Treasurer</p>
+            <div class="bio-short">
+                <p>Michelle was born and raised in Detroit. <span class="read-more-link" onclick="toggleBio(this)">Read more</span></p>
+            </div>
+            <div class="bio-full">
+                <p> Michelle was born and raised in Detroit. She moved to the Toledo area after meeting her husband. They share their home with 2 dogs and 4 turtles. She worked in the automotive manufacturing supplier field as a Supply Chain production and inventory scheduler as well as shipping/receiving. She got laid off after 20 years and decided to follow her passion for dogs by starting her own dog sitting business, which she is still currently doing. One of her most favorite things to do is participate in dog sports with her dog, competing in Nosework and Rally as well as showing him in the conformation ring. She also has been a volunteer for 12 years with the PET Bull Project and loves to educate people about a variety of dog related topics. </p>
+                <span class="read-more-link" onclick="toggleBio(this)">Read less</span>
             </div>
         </div>
 
-        <!-- Metrics Section using existing card class -->
-        <div class="card" style="margin-bottom: 25px;">
-            <div class="card-content">
-                <h2 class="section-heading" style="text-align: center;">What We Measure</h2>
-                <p style="text-align: center; margin-bottom: 35px;">These are the key indicators that help us track our progress and ensure we're making a real difference in our community.</p>
 
-                <!-- Using existing programs-grid class -->
-                <div class="programs-grid">
-                    <!-- Community Safety -->
-                    <div class="card-highlights" style="padding: 20px;">
-                        <h3 style="color: #5A9B32; font-size: 1.3em; margin-bottom: 15px; text-align: center;">Community Safety</h3>
-                        <ul style="list-style: none; padding: 0;">
-                            <li style="padding: 5px 0; padding-left: 20px; position: relative;">
-                                <span style="position: absolute; left: 0; color: #7AC142; font-weight: bold;">✓</span>
-                                Reported dog abuse cases
-                            </li>
-                            <li style="padding: 5px 0; padding-left: 20px; position: relative;">
-                                <span style="position: absolute; left: 0; color: #7AC142; font-weight: bold;">✓</span>
-                                Reported dog neglect cases
-                            </li>
-                            <li style="padding: 5px 0; padding-left: 20px; position: relative;">
-                                <span style="position: absolute; left: 0; color: #7AC142; font-weight: bold;">✓</span>
-                                Dog bite incidents
-                            </li>
-                            <li style="padding: 5px 0; padding-left: 20px; position: relative;">
-                                <span style="position: absolute; left: 0; color: #7AC142; font-weight: bold;">✓</span>
-                                Dog fighting-related crime
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- Youth Impact -->
-                    <div class="card-highlights" style="padding: 20px;">
-                        <h3 style="color: #5A9B32; font-size: 1.3em; margin-bottom: 15px; text-align: center;">Youth Impact</h3>
-                        <ul style="list-style: none; padding: 0;">
-                            <li style="padding: 5px 0; padding-left: 20px; position: relative;">
-                                <span style="position: absolute; left: 0; color: #7AC142; font-weight: bold;">✓</span>
-                                Teen violence and crime rates
-                            </li>
-                            <li style="padding: 5px 0; padding-left: 20px; position: relative;">
-                                <span style="position: absolute; left: 0; color: #7AC142; font-weight: bold;">✓</span>
-                                Local teen graduation rates
-                            </li>
-                            <li style="padding: 5px 0; padding-left: 20px; position: relative;">
-                                <span style="position: absolute; left: 0; color: #7AC142; font-weight: bold;">✓</span>
-                                Teen employment statistics
-                            </li>
-                            <li style="padding: 5px 0; padding-left: 20px; position: relative;">
-                                <span style="position: absolute; left: 0; color: #7AC142; font-weight: bold;">✓</span>
-                                Teens reached through programs
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- Animal Welfare -->
-                    <div class="card-highlights" style="padding: 20px;">
-                        <h3 style="color: #5A9B32; font-size: 1.3em; margin-bottom: 15px; text-align: center;">Animal Welfare</h3>
-                        <ul style="list-style: none; padding: 0;">
-                            <li style="padding: 5px 0; padding-left: 20px; position: relative;">
-                                <span style="position: absolute; left: 0; color: #7AC142; font-weight: bold;">✓</span>
-                                Dogs surrendered to shelters
-                            </li>
-                            <li style="padding: 5px 0; padding-left: 20px; position: relative;">
-                                <span style="position: absolute; left: 0; color: #7AC142; font-weight: bold;">✓</span>
-                                Dogs adopted from shelters
-                            </li>
-                            <li style="padding: 5px 0; padding-left: 20px; position: relative;">
-                                <span style="position: absolute; left: 0; color: #7AC142; font-weight: bold;">✓</span>
-                                Dogs spayed/neutered
-                            </li>
-                            <li style="padding: 5px 0; padding-left: 20px; position: relative;">
-                                <span style="position: absolute; left: 0; color: #7AC142; font-weight: bold;">✓</span>
-                                Overall dog population
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- Program Success -->
-                    <div class="card-highlights" style="padding: 20px;">
-                        <h3 style="color: #5A9B32; font-size: 1.3em; margin-bottom: 15px; text-align: center;">Program Success</h3>
-                        <ul style="list-style: none; padding: 0;">
-                            <li style="padding: 5px 0; padding-left: 20px; position: relative;">
-                                <span style="position: absolute; left: 0; color: #7AC142; font-weight: bold;">✓</span>
-                                Number of dogs trained
-                            </li>
-                            <li style="padding: 5px 0; padding-left: 20px; position: relative;">
-                                <span style="position: absolute; left: 0; color: #7AC142; font-weight: bold;">✓</span>
-                                Teen center attendance
-                            </li>
-                            <li style="padding: 5px 0; padding-left: 20px; position: relative;">
-                                <span style="position: absolute; left: 0; color: #7AC142; font-weight: bold;">✓</span>
-                                Program attendance
-                            </li>
-                            <li style="padding: 5px 0; padding-left: 20px; position: relative;">
-                                <span style="position: absolute; left: 0; color: #7AC142; font-weight: bold;">✓</span>
-                                Dog owners reached
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="info-box" style="margin-top: 30px;">
-                    <p>We regularly evaluate our data to see how well we're doing. Some measurements (like number of dogs trained) are indicators that help us track bigger goals (like reducing neglect and abuse). Each program gets its own evaluation to measure its impact on our overall mission.</p>
-                </div>
+        <!-- Susan Bedra -->
+        <div class="board-member">
+            <div class="placeholder-photo">Photo coming soon</div>
+            <h3 class="member-name">Susan Bedra</h3>
+            <p class="member-title">Board Member</p>
+            <div class="bio-short">
+                <p>Bio coming soon</p>
             </div>
         </div>
 
-        <!-- CTA Section using existing card class with inline gradient -->
-        <div class="card" style="background: linear-gradient(135deg, #5A9B32 0%, #7AC142 100%); color: white; margin-bottom: 25px;">
-            <div class="card-content" style="text-align: center;">
-                <h2 style="color: white; border-bottom: none !important; margin-bottom: 15px;">See Our Full Impact Report</h2>
-                <p style="font-size: 1.1em; margin-bottom: 25px;">Want to see the details? Download our complete 2024 Impact Report to learn more about what we've accomplished and where we're headed.</p>
-                <a href="/wp-content/uploads/2025/04/impact-report-2024-pages-no-bleeds.pdf" class="primary-btn" target="_blank" style="margin-right: 10px; background: white; color: #5A9B32;">Download 2024 Impact Report (PDF)</a>
-                <a href="/#TPBP-Programs" class="secondary-btn" style="background: transparent; color: white; border-color: white;">Explore Our Programs</a>
+        <!-- Wendy Carr -->
+        <div class="board-member">
+            <img src="https://toledospetbullproject.com/wp-content/uploads/2025/09/Wendy-Carr-board.jpeg" alt="Wendy Carr, Board Member" class="member-photo">
+            <h3 class="member-name">Wendy Carr</h3>
+            <p class="member-title">Board Member</p>
+            <div class="bio-short">
+                <p>Bio coming soon</p>
+            </div>
+        </div>
+
+        <!-- Zurijanne Carter -->
+        <div class="board-member">
+            <img src="https://metroparkstoledo.com/media/9153/dsc_0350a.jpg?quality=80" alt="Zuri Carter, Board Member" class="member-photo">
+            <h3 class="member-name">Zurianne Carter</h3>
+            <p class="member-title">Board Member</p>
+            <div class="bio-short">
+                <p>Bio coming soon</p>
+            </div>
+        </div>
+
+        <!-- Max Machon -->
+        <div class="board-member">
+            <img src="https://toledospetbullproject.com/wp-content/uploads/2025/09/Max-Machon-board.jpeg" alt="Max Machon, Board Member" class="member-photo">
+            <h3 class="member-name">Max Machon</h3>
+            <p class="member-title">Board Member</p>
+            <div class="bio-short">
+                <p>Max began his journey with Toledo's PET Bull Project in 2020, driven by their educational mission. <span class="read-more-link" onclick="toggleBio(this)">Read more</span></p>
+            </div>
+            <div class="bio-full">
+                <p>Max began his journey with Toledo's PET Bull Project in 2020, driven by their educational mission. Initially involved in youth programs such as Teachers Pet and Youth Treatment Center presentations, Max, a certified professional dog trainer, also got involved in teaching affordable training classes at PET Bull. He strongly advocates for accessible, high-quality training for all.</p>
+                <p>In 2021, Max expanded his role, joining PET Bull Project's board of directors. Today, he oversees PET Bull's training programs, which include public group classes, free park training, and training for PET Bull Project's foster dogs. Max remains dedicated to teaching the Teachers' PET class and delivering educational sessions at YTC, JDC, and local schools alongside his rescue dog, Freddie (a PET Bull Rescue dog). Additionally, Max actively fosters dogs for the rescue. Max is committed to growing PET Bull's community education and training initiatives.</p>
+                <span class="read-more-link" onclick="toggleBio(this)">Read less</span>
+            </div>
+        </div>
+
+        <!-- Cindy Reinsel -->
+        <div class="board-member">
+            <img src="https://toledospetbullproject.com/wp-content/uploads/2025/09/Cindy-Reinsel-board.jpeg" alt="Cindy Reinsel, Board Member" class="member-photo">
+            <h3 class="member-name">Cindy Reinsel</h3>
+            <p class="member-title">Board Member</p>
+            <div class="bio-short">
+                <p>Cindy is one of the founders of Toledo's PET Bull Project. She works tirelessly to keep all the programs running smoothly and create new experiences for our community. <span class="read-more-link" onclick="toggleBio(this)">Read more</span></p>
+            </div>
+            <div class="bio-full">
+                <p>Cindy is one of the founders of Toledo's PET Bull Project. She works tirelessly to keep all the programs running smoothly and create new experiences for our community. Cindy had a dog she got from a puppy mill at 10 weeks old who had never been outside. His pads were swollen from sitting in his own feces and urine. This was back in 2009 when puppy mills were not as well-known and widespread as they are today. At 5 months old he began to chase his tail excessively and aggressively at times. When she took him to the vet, they said he would never get better, and he should be euthanized. Cindy wanted to know more about this condition called "Spinning" which is an obsessive-compulsive disorder. She did research and found Dr. Alice Moon at Tufts University who specialized in this disorder. Together with the local veterinarian they came up with a plan to properly manage his issues. Cindy felt that if she could do this research and educate herself to help her dogs then others could as well.</p>
+                <span class="read-more-link" onclick="toggleBio(this)">Read less</span>
+            </div>
+        </div>
+
+        <!-- Ann Strickland -->
+        <div class="board-member">
+            <img src="https://toledospetbullproject.com/wp-content/uploads/2025/09/Ann-Strickland-board.jpg" alt="Ann Strickland, Board Member" class="member-photo">
+            <h3 class="member-name">Ann Strickland</h3>
+            <p class="member-title">Board Member</p>
+            <div class="bio-short">
+                <p>Ann met the founder of Toledo's Pet Bull Project at a dog training session in 2010. <span class="read-more-link" onclick="toggleBio(this)">Read more</span></p>
+            </div>
+            <div class="bio-full">
+                <p>Ann met the founder of Toledo's Pet Bull Project at a dog training session in 2010. She always wanted to volunteer within her community and when she learned there was a group saving dogs and educating humans, she was in. Ann and her beloved pitbull Neo taught humane education at the Adult Treatment Center, in local schools, parks and libraries for over 10 years. Her most memorable moment is teaching a humane education class to a known dog fighter who was incarcerated. Neo and Ann walked in the Old West End parade many times. Ann and Cindy lobbied against breed specific legislation in Columbus. She continues Pawsitive Reading programs with her pitbull mix, Rosie. She joined the PET Bull board in 2025, bringing her passion for pittties and her event experience to TPBP. Ann believes in the importance of education, puppy socialization and spay/neutering programs.</p>
+                <span class="read-more-link" onclick="toggleBio(this)">Read less</span>
+            </div>
+        </div>
+
+        <!-- Ellen Yard -->
+        <div class="board-member">
+            <img src="https://toledospetbullproject.com/wp-content/uploads/2025/09/Ellen-Yard-board.jpeg" alt="Ellen Yard, Board Member" class="member-photo">
+            <h3 class="member-name">Ellen Yard</h3>
+            <p class="member-title">Board Member</p>
+            <div class="bio-short">
+                <p>Ellen became involved in Toledo's PET Bull Project in 2023. <span class="read-more-link" onclick="toggleBio(this)">Read more</span></p>
+            </div>
+            <div class="bio-full">
+                <p>Ellen became involved in Toledo's PET Bull Project in 2023. She grew up in Toledo and has also called Atlanta, Georgia, and Lusaka, Zambia home. In 2013, she adopted her first and only dog, Buckeye, who has been by her side through each of those moves. Buckeye wasn't always the easiest dog, but she taught Ellen one of the most important lessons about rescue: every dog can adapt when given patience, guidance, and an owner willing to put in the effort. That experience shaped Ellen's deep appreciation for rescue organizations and the vital role they play in giving dogs and families a second chance.</p>
+                <p>Today, Ellen serves on the Board of Toledo Petbull Project as webmaster and helps coordinate training class registrations, along with pitching in wherever she's needed. She is proud to support TPP's mission and believes that rescue is about more than saving lives — it's about building stronger connections between people, dogs, and the community.</p>
+                <span class="read-more-link" onclick="toggleBio(this)">Read less</span>
             </div>
         </div>
     </div>
-</body>
-</html>
+</div>
 <!-- /wp:html -->
+
+<!-- wp:paragraph -->
+<p></p>
+<!-- /wp:paragraph -->
