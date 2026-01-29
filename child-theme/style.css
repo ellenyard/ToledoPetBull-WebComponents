@@ -297,6 +297,17 @@ Text Domain: astra-child
     display: none !important;
 }
 
+/* Style "Get Tickets" link on event pages */
+.tribe-events-c-small-cta__link.tribe-common-cta {
+    color: #5A9B32 !important;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.tribe-events-c-small-cta__link.tribe-common-cta:hover {
+    color: #7AC142 !important;
+}
+
 /* Remove star ratings in Shop */
 .star-rating, .woocommerce-product-rating {
     display: none !important;
