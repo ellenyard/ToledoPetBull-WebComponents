@@ -911,3 +911,147 @@ html {
     color: #7AC142;
     font-weight: bold;
 }
+
+/* ============================================
+   THE EVENTS CALENDAR — LIST VIEW IMPROVEMENTS
+   Fixes: card styling, prominent "Get Tickets"
+   button, and better single-event layout
+   ============================================ */
+/* --- Card styling for each event --- */
+.tribe-events .tribe-events-calendar-list__event {
+    background: white !important;
+    border: 1px solid #E0E0E0 !important;
+    border-radius: 8px !important;
+    padding: 20px !important;
+    margin-bottom: 20px !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08) !important;
+    transition: box-shadow 0.3s ease !important;
+}
+.tribe-events .tribe-events-calendar-list__event:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12) !important;
+}
+/* Remove the default separator lines between events */
+.tribe-events .tribe-events-calendar-list__event + .tribe-events-calendar-list__event {
+    border-top: none !important;
+}
+.tribe-events .tribe-events-calendar-list__event-row--featured::after,
+.tribe-events .tribe-events-calendar-list__event::after {
+    display: none !important;
+}
+/* --- Date badge styling --- */
+.tribe-events .tribe-events-calendar-list__event-date-tag {
+    background: #F6F1E7 !important;
+    border-radius: 8px !important;
+    padding: 10px 15px !important;
+    text-align: center !important;
+    min-width: 70px !important;
+}
+.tribe-events .tribe-events-calendar-list__event-date-tag-weekday {
+    color: #5A9B32 !important;
+    font-weight: bold !important;
+    text-transform: uppercase !important;
+    font-size: 0.85em !important;
+}
+.tribe-events .tribe-events-calendar-list__event-date-tag-daynum {
+    color: #222222 !important;
+    font-weight: bold !important;
+    font-size: 1.8em !important;
+    line-height: 1.2 !important;
+}
+/* --- "Get Tickets" as a real button --- */
+.tribe-events .tribe-events-c-small-cta__link,
+.tribe-events a.tribe-events-c-small-cta__link {
+    background: #5A9B32 !important;
+    color: white !important;
+    padding: 10px 24px !important;
+    border-radius: 25px !important;
+    font-weight: bold !important;
+    text-decoration: none !important;
+    display: inline-block !important;
+    transition: background 0.3s ease !important;
+    font-size: 1em !important;
+    border: none !important;
+    line-height: 1.4 !important;
+    margin-top: 8px !important;
+}
+.tribe-events .tribe-events-c-small-cta__link:hover,
+.tribe-events a.tribe-events-c-small-cta__link:hover {
+    background: #7AC142 !important;
+    color: white !important;
+    text-decoration: none !important;
+}
+/* Sold Out button — grayed out */
+.tribe-events .tribe-events-c-small-cta--sold-out .tribe-events-c-small-cta__link,
+.tribe-events .tribe-events-c-small-cta--sold-out a.tribe-events-c-small-cta__link {
+    background: #999999 !important;
+    cursor: default !important;
+}
+.tribe-events .tribe-events-c-small-cta--sold-out .tribe-events-c-small-cta__link:hover {
+    background: #999999 !important;
+}
+/* --- Price styling --- */
+.tribe-events .tribe-events-c-small-cta__price {
+    font-size: 1.15em !important;
+    font-weight: bold !important;
+    color: #222222 !important;
+    margin-top: 4px !important;
+}
+/* --- "X tickets left" styling --- */
+.tribe-events .tribe-events-c-small-cta__stock {
+    color: #5A9B32 !important;
+    font-weight: 600 !important;
+    font-size: 0.9em !important;
+}
+/* --- Event title links --- */
+.tribe-events .tribe-events-calendar-list__event-title-link {
+    color: #222222 !important;
+    text-decoration: none !important;
+}
+.tribe-events .tribe-events-calendar-list__event-title-link:hover {
+    color: #5A9B32 !important;
+}
+/* --- "Find Events" button --- */
+.tribe-events .tribe-events-c-search__button {
+    background: #5A9B32 !important;
+    border-color: #5A9B32 !important;
+}
+.tribe-events .tribe-events-c-search__button:hover {
+    background: #7AC142 !important;
+    border-color: #7AC142 !important;
+}
+/* --- Month/date headers --- */
+.tribe-events .tribe-events-calendar-list__month-separator-text {
+    color: #222222 !important;
+    font-weight: bold !important;
+}
+/* --- Navigation links (Previous/Next Events) --- */
+.tribe-events .tribe-events-c-nav__prev a,
+.tribe-events .tribe-events-c-nav__next a,
+.tribe-events .tribe-events-c-nav__today a {
+    color: #5A9B32 !important;
+}
+.tribe-events .tribe-events-c-nav__prev a:hover,
+.tribe-events .tribe-events-c-nav__next a:hover,
+.tribe-events .tribe-events-c-nav__today a:hover {
+    color: #7AC142 !important;
+}
+/* --- Mobile adjustments --- */
+@media (max-width: 768px) {
+    .tribe-events .tribe-events-calendar-list__event {
+        padding: 15px !important;
+    }
+
+    .tribe-events .tribe-events-c-small-cta__link,
+    .tribe-events a.tribe-events-c-small-cta__link {
+        padding: 12px 20px !important;
+        font-size: 1em !important;
+        display: block !important;
+        text-align: center !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .tribe-events .tribe-events-calendar-list__event-date-tag {
+        min-width: 55px !important;
+    }
+}
