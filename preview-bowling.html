@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bowling for Bullies - Preview</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f6f1e7;
+            padding: 40px 20px;
+            margin: 0;
+        }
+        .page-header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        .section-heading {
+            color: #5A9B32;
+            margin: 0;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #7AC142;
+            font-size: 1.8em;
+        }
+        .card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            border: 1px solid #E0E0E0;
+            max-width: 350px;
+            margin: 0 auto;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+        }
+        .card-image {
+            width: 100%;
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+            background-image: url('https://toledospetbullproject.com/wp-content/uploads/2025/04/67f0003aab6bf_rsw_1023m.webp');
+        }
+        .card-content {
+            padding: 25px;
+        }
+        .card-title {
+            font-weight: bold;
+            color: #222222;
+            margin: 0 0 12px 0;
+            font-size: 1.4em;
+        }
+        .card-description {
+            color: #333333;
+            margin-bottom: 18px;
+            line-height: 1.5;
+        }
+        .primary-btn {
+            background: #5A9B32;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-weight: bold;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            transition: background 0.3s ease;
+        }
+        .primary-btn:hover {
+            background: #7AC142;
+        }
+        .secondary-btn {
+            background: white;
+            color: #5A9B32;
+            border: 2px solid #5A9B32;
+            padding: 10px 25px;
+            border-radius: 25px;
+            font-weight: bold;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        .secondary-btn:hover {
+            background: #5A9B32;
+            color: white;
+        }
+        .note {
+            max-width: 700px;
+            margin: 30px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            border-left: 4px solid #7AC142;
+            font-size: 0.9em;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="page-header">
+        <h2 class="section-heading">Upcoming Events</h2>
+    </div>
+
+    <div class="card">
+        <div class="card-image"></div>
+        <div class="card-content">
+            <h3 class="card-title">Bowling for Bullies</h3>
+            <p style="font-weight: bold; color: #5A9B32; margin-bottom: 15px;">Sat, May 16 at Timbers Bowling Lanes</p>
+            <p class="card-description">Join us for a fun night of bowling, 50/50 raffles, silent auction, and cash bar! $35/person or $150 for a team of 5. Includes 3 games, shoe rental & food.</p>
+            <div style="margin-top: 20px; display: flex; gap: 10px; flex-wrap: wrap;">
+                <a href="#" class="primary-btn">Get Tickets</a>
+                <a href="#" class="secondary-btn">Become a Sponsor</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="note">
+        <strong>Preview:</strong> This is how the Bowling for Bullies card will appear in your Upcoming Events section.
+    </div>
+</body>
+</html>

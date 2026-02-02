@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero Preview - Bowling for Bullies</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+        }
+        .preview-label {
+            background: #5A9B32;
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+            font-weight: bold;
+        }
+        /* Hero Carousel Styles */
+        .hero-carousel {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            overflow: hidden;
+            margin-bottom: 40px;
+        }
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        .carousel-slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .carousel-slide.active {
+            opacity: 1;
+        }
+        .carousel-image {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        .carousel-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, rgba(40,40,40,0.35) 0%, rgba(40,40,40,0.18) 50%, rgba(40,40,40,0.05) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding-left: 60px;
+        }
+        .carousel-content {
+            text-align: left;
+            color: white;
+            max-width: 500px;
+            padding: 20px;
+        }
+        .carousel-content h1 {
+            font-size: 2.8rem;
+            font-weight: 900;
+            margin-bottom: 15px;
+            text-shadow: 3px 3px 8px rgba(0,0,0,0.9);
+            color: white;
+            line-height: 1.2;
+        }
+        .carousel-content p {
+            font-size: 1.3rem;
+            margin-bottom: 25px;
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.9);
+            font-weight: 500;
+        }
+        .carousel-dots {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index: 10;
+        }
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.5);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .dot.active, .dot:hover {
+            background: white;
+            transform: scale(1.2);
+        }
+        .carousel-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0,0,0,0.3);
+            color: white;
+            border: none;
+            padding: 15px;
+            cursor: pointer;
+            font-size: 1.5rem;
+            z-index: 10;
+            transition: background 0.3s;
+        }
+        .carousel-arrow:hover {
+            background: rgba(0,0,0,0.5);
+        }
+        .carousel-arrow.left {
+            left: 20px;
+        }
+        .carousel-arrow.right {
+            right: 20px;
+        }
+        .cta-btn {
+            background: #7AC142;
+            color: white;
+            padding: 18px 35px;
+            border: none;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .cta-btn:hover {
+            background: #5A9B32;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+        @media (max-width: 768px) {
+            .hero-carousel {
+                height: 400px;
+            }
+            .carousel-overlay {
+                padding-left: 30px;
+            }
+            .carousel-content {
+                padding: 15px;
+                max-width: 90%;
+            }
+            .carousel-content h1 {
+                font-size: 2rem;
+            }
+            .carousel-content p {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="preview-label">
+        HERO PREVIEW - Bowling for Bullies (First Slide) - Click arrows or dots to navigate
+    </div>
+
+    <div class="hero-carousel">
+        <div class="carousel-container">
+            <!-- Slide 1: Bowling for Bullies -->
+            <div class="carousel-slide active">
+                <div class="carousel-image" style="background-image: url('bowling-for-bullies-hero.webp');">
+                    <div class="carousel-overlay">
+                        <div class="carousel-content">
+                            <h1>Bowling for Bullies — May 16</h1>
+                            <p>Join us for bowling, raffles, silent auction & more! $35/person or $150/team of 5</p>
+                            <a href="https://toledospetbullproject.com/product/bowling-for-bullies/" class="cta-btn">Get Tickets</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 2: Fostering -->
+            <div class="carousel-slide">
+                <div class="carousel-image" style="background-image: url('https://toledospetbullproject.com/wp-content/uploads/2025/09/Hero_Foster.jpg');">
+                    <div class="carousel-overlay">
+                        <div class="carousel-content">
+                            <h1>Open your home, save a life</h1>
+                            <p>Fostering gives rescue dogs their second chance</p>
+                            <a href="https://toledospetbullproject.com/foster/" class="cta-btn">Start Fostering</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 3: Training -->
+            <div class="carousel-slide">
+                <div class="carousel-image" style="background-image: url('https://toledospetbullproject.com/wp-content/uploads/2025/09/Hero_Training.jpg');">
+                    <div class="carousel-overlay">
+                        <div class="carousel-content">
+                            <h1>Train together, bond together</h1>
+                            <p>Sign up now for positive, affordable dog training classes</p>
+                            <a href="https://toledospetbullproject.com/training/" class="cta-btn">View Classes</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Dots indicator -->
+        <div class="carousel-dots">
+            <span class="dot active" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+        <!-- Arrow Controls -->
+        <button class="carousel-arrow left" onclick="plusSlides(-1)" aria-label="Previous Slide">&#10094;</button>
+        <button class="carousel-arrow right" onclick="plusSlides(1)" aria-label="Next Slide">&#10095;</button>
+    </div>
+
+    <script>
+        let slideIndex = 1;
+        let slides = document.getElementsByClassName("carousel-slide");
+        let dots = document.getElementsByClassName("dot");
+        let autoScrollInterval;
+
+        function showSlides(n) {
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].classList.remove("active");
+            }
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].classList.remove("active");
+            }
+            slides[slideIndex-1].classList.add("active");
+            dots[slideIndex-1].classList.add("active");
+        }
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+            resetAutoScroll();
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+            resetAutoScroll();
+        }
+
+        function autoScroll() {
+            plusSlides(1);
+        }
+
+        function resetAutoScroll() {
+            clearInterval(autoScrollInterval);
+            autoScrollInterval = setInterval(autoScroll, 7000);
+        }
+
+        // Initialize
+        showSlides(slideIndex);
+        autoScrollInterval = setInterval(autoScroll, 7000);
+    </script>
+</body>
+</html>
