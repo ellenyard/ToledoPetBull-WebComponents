@@ -913,10 +913,12 @@ html {
 }
 
 /* ============================================
-   THE EVENTS CALENDAR — LIST VIEW IMPROVEMENTS
-   Fixes: card styling, prominent "Get Tickets"
-   button, and better single-event layout
+   THE EVENTS CALENDAR — COMPLETE OVERHAUL
+   Covers both list view and single event pages
    ============================================ */
+/* ===========================================
+   LIST VIEW (event listing / category pages)
+   =========================================== */
 /* --- Card styling for each event --- */
 .tribe-events .tribe-events-calendar-list__event {
     background: white !important;
@@ -930,7 +932,7 @@ html {
 .tribe-events .tribe-events-calendar-list__event:hover {
     box-shadow: 0 4px 12px rgba(0,0,0,0.12) !important;
 }
-/* Remove the default separator lines between events */
+/* Remove default separator lines */
 .tribe-events .tribe-events-calendar-list__event + .tribe-events-calendar-list__event {
     border-top: none !important;
 }
@@ -938,7 +940,7 @@ html {
 .tribe-events .tribe-events-calendar-list__event::after {
     display: none !important;
 }
-/* --- Date badge styling --- */
+/* --- Date badge --- */
 .tribe-events .tribe-events-calendar-list__event-date-tag {
     background: #F6F1E7 !important;
     border-radius: 8px !important;
@@ -957,6 +959,15 @@ html {
     font-weight: bold !important;
     font-size: 1.8em !important;
     line-height: 1.2 !important;
+}
+/* --- Hide venue/address in list view (all events are at the same place) --- */
+.tribe-events .tribe-events-calendar-list__event-venue,
+.tribe-events .tribe-events-calendar-list__event-venue-address {
+    display: none !important;
+}
+/* --- Hide description excerpt in list view (same text repeated) --- */
+.tribe-events .tribe-events-calendar-list__event-description {
+    display: none !important;
 }
 /* --- "Get Tickets" as a real button --- */
 .tribe-events .tribe-events-c-small-cta__link,
@@ -980,7 +991,7 @@ html {
     color: white !important;
     text-decoration: none !important;
 }
-/* Sold Out button — grayed out */
+/* Sold Out — grayed out */
 .tribe-events .tribe-events-c-small-cta--sold-out .tribe-events-c-small-cta__link,
 .tribe-events .tribe-events-c-small-cta--sold-out a.tribe-events-c-small-cta__link {
     background: #999999 !important;
@@ -989,14 +1000,14 @@ html {
 .tribe-events .tribe-events-c-small-cta--sold-out .tribe-events-c-small-cta__link:hover {
     background: #999999 !important;
 }
-/* --- Price styling --- */
+/* --- Price --- */
 .tribe-events .tribe-events-c-small-cta__price {
     font-size: 1.15em !important;
     font-weight: bold !important;
     color: #222222 !important;
     margin-top: 4px !important;
 }
-/* --- "X tickets left" styling --- */
+/* --- "X tickets left" --- */
 .tribe-events .tribe-events-c-small-cta__stock {
     color: #5A9B32 !important;
     font-weight: 600 !important;
@@ -1019,7 +1030,7 @@ html {
     background: #7AC142 !important;
     border-color: #7AC142 !important;
 }
-/* --- Month/date headers --- */
+/* --- Month headers --- */
 .tribe-events .tribe-events-calendar-list__month-separator-text {
     color: #222222 !important;
     font-weight: bold !important;
@@ -1035,12 +1046,16 @@ html {
 .tribe-events .tribe-events-c-nav__today a:hover {
     color: #7AC142 !important;
 }
-/* --- Mobile adjustments --- */
+/* --- Hide "Subscribe to calendar" on list pages --- */
+.tribe-events .tribe-events-c-subscribe-dropdown,
+.tribe-events .tribe-events-subscribe-dropdown {
+    display: none !important;
+}
+/* --- List view mobile --- */
 @media (max-width: 768px) {
     .tribe-events .tribe-events-calendar-list__event {
         padding: 15px !important;
     }
-
     .tribe-events .tribe-events-c-small-cta__link,
     .tribe-events a.tribe-events-c-small-cta__link {
         padding: 12px 20px !important;
@@ -1050,8 +1065,62 @@ html {
         width: 100% !important;
         box-sizing: border-box !important;
     }
-
     .tribe-events .tribe-events-calendar-list__event-date-tag {
         min-width: 55px !important;
     }
+}
+/* ===========================================
+   SINGLE EVENT PAGE (registration page)
+   =========================================== */
+/* Hide Details sidebar (redundant date/time/cost) */
+.single-tribe_events .tribe-events-single-section-details,
+.single-tribe_events .tribe-events-meta-group-details {
+    display: none !important;
+}
+/* Hide Venue / Location */
+.single-tribe_events .tribe-events-single-section-venue,
+.single-tribe_events .tribe-events-meta-group-venue {
+    display: none !important;
+}
+/* Hide Organizer */
+.single-tribe_events .tribe-events-single-section-organizer,
+.single-tribe_events .tribe-events-meta-group-organizer {
+    display: none !important;
+}
+/* Hide Add to Calendar */
+.single-tribe_events .tribe-events-cal-links,
+.single-tribe_events .tribe-events-c-subscribe-dropdown,
+.single-tribe_events .tribe-events-subscribe-dropdown {
+    display: none !important;
+}
+/* Hide Previous/Next event navigation */
+.single-tribe_events .tribe-events-sub-nav,
+.single-tribe_events .tribe-events-nav-pagination {
+    display: none !important;
+}
+/* --- Ticket form styling --- */
+.single-tribe_events .tribe-tickets__tickets-form {
+    background: white !important;
+    border: 2px solid #7AC142 !important;
+    border-radius: 8px !important;
+    padding: 20px !important;
+    margin-top: 20px !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08) !important;
+}
+/* "Get Tickets" submit button on single event */
+.single-tribe_events .tribe-tickets__tickets-buy,
+.single-tribe_events .tribe-common .tribe-tickets__tickets-buy {
+    background: #5A9B32 !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 25px !important;
+    padding: 12px 30px !important;
+    font-weight: bold !important;
+    font-size: 1.05em !important;
+    cursor: pointer !important;
+    transition: background 0.3s ease !important;
+}
+.single-tribe_events .tribe-tickets__tickets-buy:hover,
+.single-tribe_events .tribe-common .tribe-tickets__tickets-buy:hover {
+    background: #7AC142 !important;
 }

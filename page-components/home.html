@@ -1,0 +1,482 @@
+<!-- wp:html -->
+<div class="hero-carousel">
+    <div class="carousel-container">
+        <!-- HIDDEN UNTIL NEEDED
+        <div class="carousel-slide active">
+            <div class="carousel-image" style="background-image: url('https://toledospetbullproject.com/wp-content/uploads/2025/09/Hero_Starry-Night.jpg');">
+                <div class="carousel-overlay">
+                    <div class="carousel-content">
+                        <h1>A Starry Night is Oct. 18</h1>
+                        <p>Don't miss the tail waggin' talent show at our annual fundraising event</p>
+                        <a href="https://toledospetbullproject.com/fundraising/#tpbp-starry-night" class="cta-btn">Buy Tickets</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+     -->
+        <!-- Slide 2: Fostering -->
+        <div class="carousel-slide">
+            <div class="carousel-image" style="background-image: url('https://toledospetbullproject.com/wp-content/uploads/2025/09/Hero_Foster.jpg');">
+                <div class="carousel-overlay">
+                    <div class="carousel-content">
+                        <h1>Open your home, save a life</h1>
+                        <p>Fostering gives rescue dogs their second chance</p>
+                        <a href="https://toledospetbullproject.com/foster/" class="cta-btn">Start Fostering</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Slide 3: Training -->
+        <div class="carousel-slide">
+            <div class="carousel-image" style="background-image: url('https://toledospetbullproject.com/wp-content/uploads/2025/09/Hero_Training.jpg');">
+                <div class="carousel-overlay">
+                    <div class="carousel-content">
+                        <h1>Train together, bond together</h1>
+                        <p>Sign up now for positive, affordable dog training classes</p>
+                        <a href="https://toledospetbullproject.com/training/" class="cta-btn">View Classes</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Dots indicator -->
+    <div class="carousel-dots">
+       <!--  <span class="dot active" onclick="currentSlide(1)"></span>  -->
+        <span class="dot active" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+    </div>
+    <!-- Arrow Controls -->
+    <button class="carousel-arrow left" onclick="plusSlides(-1)" aria-label="Previous Slide">&#10094;</button>
+    <button class="carousel-arrow right" onclick="plusSlides(1)" aria-label="Next Slide">&#10095;</button>
+</div>
+<script>
+let slideIndex = 1;
+let slides = document.getElementsByClassName("carousel-slide");
+let dots = document.getElementsByClassName("dot");
+let autoScrollInterval;
+function showSlides(n) {
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].classList.remove("active");
+    }
+    for (let i = 0; i < dots.length; i++) {
+        dots[i].classList.remove("active");
+    }
+    slides[slideIndex-1].classList.add("active");
+    dots[slideIndex-1].classList.add("active");
+}
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+    resetAutoScroll();
+}
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+    resetAutoScroll();
+}
+function autoScroll() {
+    plusSlides(1);
+}
+function resetAutoScroll() {
+    clearInterval(autoScrollInterval);
+    autoScrollInterval = setInterval(autoScroll, 7000); // Slower: 7 seconds
+}
+// Initialize
+showSlides(slideIndex);
+autoScrollInterval = setInterval(autoScroll, 7000); // Slower: 7 seconds
+</script>
+<!-- /wp:html -->
+<!-- wp:html -->
+<!-- Our Mission Section -->
+<div style="padding: 50px 20px; font-family: Arial, sans-serif;">
+    <div style="max-width: 800px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
+
+        <!-- Left Column: Mission Text -->
+        <div>
+            <h2 style="color: #222222; font-size: 2em; margin-bottom: 15px;">Our Mission</h2>
+
+            <p style="color: #333333; margin-bottom: 20px; line-height: 1.6;">
+                Since becoming a 501c3 nonprofit in 2011, Toledo's PET Bull Project has been on a mission! We're passionate about three things:
+            </p>
+
+            <!-- Mission Points with Paw Icons -->
+            <div style="margin-bottom: 30px;">
+                <!-- Point 1 -->
+                <div style="display: flex; gap: 15px; margin-bottom: 15px; align-items: flex-start;">
+                    <span style="color: #7AC142; font-size: 1.2em; flex-shrink: 0;">🐾</span>
+                    <p style="color: #333333; margin: 0; line-height: 1.6;">
+                        <strong>Preventing</strong> animal cruelty and dog fighting
+                    </p>
+                </div>
+
+                <!-- Point 2 -->
+                <div style="display: flex; gap: 15px; margin-bottom: 15px; align-items: flex-start;">
+                    <span style="color: #7AC142; font-size: 1.2em; flex-shrink: 0;">🐾</span>
+                    <p style="color: #333333; margin: 0; line-height: 1.6;">
+                        <strong>Educating</strong> on the importance of spaying/neutering and responsible pet ownership
+                    </p>
+                </div>
+
+                <!-- Point 3 -->
+                <div style="display: flex; gap: 15px; margin-bottom: 15px; align-items: flex-start;">
+                    <span style="color: #7AC142; font-size: 1.2em; flex-shrink: 0;">🐾</span>
+                    <p style="color: #333333; margin: 0; line-height: 1.6;">
+                        <strong>Training</strong> individuals and their dogs to become strong advocates, regardless of breed
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Column: Image -->
+        <div style="text-align: center;">
+            <img class="mission-dog" src="https://toledospetbullproject.com/wp-content/uploads/2025/06/Daphne-4.jpg"
+                alt="Dog with ball laying on green grass"
+                style="max-width: 320px; height: auto; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+        </div>
+
+    </div>
+</div>
+<!-- Mobile Responsive Styles -->
+<style>
+@media (max-width: 768px) {
+    .mission-section,
+    [style*="display: grid;"] {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+    .mission-dog {
+        display: none !important;
+    }
+    .mission-section > div,
+    [style*="display: grid;"] > div:first-child {
+        width: 100% !important;
+    }
+}
+</style>
+<!-- /wp:html -->
+<!-- wp:html -->
+<div class="page-header">
+    <h2 id="TPBP-Programs" class="section-heading">Our Programs</h2>
+</div>
+<div style="background-color: #f6f1e7; padding: 20px 0 50px 0;">
+    <div class="programs-grid">
+        <!-- Prevention Card -->
+        <div class="card">
+            <div class="card-image" style="background-image: url('https://toledospetbullproject.com/wp-content/uploads/2025/09/Pantry.jpg'); height: 300px;">
+            </div>
+            <div class="card-content">
+                <h3 class="card-title" style="text-align: center;">
+                    <a href="https://toledospetbullproject.com/prevention" style="text-decoration: none; color: #222222;">Prevention</a>
+                </h3>
+                <p class="card-description">We work to keep healthy, happy pets in homes through our food pantry, low-cost spay/neuter, free vaccine clinics, and affordable grooming.</p>
+
+                <ul style="list-style: none; padding: 0; margin: 20px 0;">
+                    <li style="margin-bottom: 8px;">
+                        <a href="https://toledospetbullproject.com/prevention/#TPBP-Spay" style="color: #5A9B32; text-decoration: none; font-weight: 500;">Spay/Neuter Support</a>
+                    </li>
+                    <li style="margin-bottom: 8px;">
+                        <a href="https://toledospetbullproject.com/prevention/#TPBP-Park" style="color: #5A9B32; text-decoration: none; font-weight: 500;">Vaccine Clinic</a>
+                    </li>
+                    <li style="margin-bottom: 8px;">
+                        <a href="https://toledospetbullproject.com/prevention/#TPBP-Pantry" style="color: #5A9B32; text-decoration: none; font-weight: 500;">Pet Food Pantry</a>
+                    </li>
+                    <li style="margin-bottom: 8px;">
+                        <a href="https://toledospetbullproject.com/prevention/#TPBP-Grooming" style="color: #5A9B32; text-decoration: none; font-weight: 500;">Low-cost Grooming</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- Education Card -->
+        <div class="card">
+            <div class="card-image" style="background-image: url('https://toledospetbullproject.com/wp-content/uploads/2025/09/Education_1.jpeg'); height: 300px;">
+            </div>
+            <div class="card-content">
+                <h3 class="card-title" style="text-align: center;">
+                    <a href="https://toledospetbullproject.com/education/" style="text-decoration: none; color: #222222;">Education</a>
+                </h3>
+                <p class="card-description">Our education programs teach pet safety and positive connections—delivered in partnership with schools, libraries, and local organizations.</p>
+
+                <ul style="list-style: none; padding: 0; margin: 20px 0;">
+                    <li style="margin-bottom: 8px;">
+                        <a href="/education/#teachers-pet" style="color: #5A9B32; text-decoration: none; font-weight: 500;">Teacher's Pet</a>
+                    </li>
+                    <li style="margin-bottom: 8px;">
+                        <a href="/education/#humane-education" style="color: #5A9B32; text-decoration: none; font-weight: 500;">Humane Education</a>
+                    </li>
+                    <li style="margin-bottom: 8px;">
+                        <a href="/education/#pet-safety" style="color: #5A9B32; text-decoration: none; font-weight: 500;">Pet Safety</a>
+                    </li>
+                    <li style="margin-bottom: 8px;">
+                        <a href="/education/#pawsitive-reading" style="color: #5A9B32; text-decoration: none; font-weight: 500;">Pawsitive Reading</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- Training Card -->
+        <div class="card">
+            <div class="card-image" style="background-image: url('https://toledospetbullproject.com/wp-content/uploads/2025/09/Dog-Training.jpeg'); height: 300px;">
+            </div>
+            <div class="card-content">
+                <h3 class="card-title" style="text-align: center;">
+                    <a href="https://toledospetbullproject.com/training/" style="text-decoration: none; color: #222222;">Training</a>
+                </h3>
+                <p class="card-description">We provide professional, low-cost, positive reinforcement training for dogs in the Toledo area—helping families build good manners, strengthen bonds, and prevent common behavior challenges.</p>
+
+                <ul style="list-style: none; padding: 0; margin: 20px 0;">
+                    <li style="margin-bottom: 8px;">
+                        <a href="https://toledospetbullproject.com/training/#TPBP-Puppy" style="color: #5A9B32; text-decoration: none; font-weight: 500;">Puppy Socialization</a>
+                    </li>
+                    <li style="margin-bottom: 8px;">
+                        <a href="https://toledospetbullproject.com/training/#TPBP-GM1" style="color: #5A9B32; text-decoration: none; font-weight: 500;">Good Manners 1</a>
+                    </li>
+                    <li style="margin-bottom: 8px;">
+                        <a href="https://toledospetbullproject.com/training/#TPBP-GM2" style="color: #5A9B32; text-decoration: none; font-weight: 500;">Good Manners 2</a>
+                    </li>
+                    <li style="margin-bottom: 8px;">
+                        <a href="https://toledospetbullproject.com/training/#TPBP-CGC" style="color: #5A9B32; text-decoration: none; font-weight: 500;">Canine Good Citizen</a>
+                    </li>
+                    <li style="margin-bottom: 8px;">
+                        <a href="https://toledospetbullproject.com/training/#TPBP-Private" style="color: #5A9B32; text-decoration: none; font-weight: 500;">Private Training</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /wp:html -->
+<!-- wp:uagb/container {"block_id":"376532dd","backgroundType":"color","backgroundColor":"#ffffff","topPaddingDesktop":50,"bottomPaddingDesktop":50,"leftPaddingDesktop":10,"rightPaddingDesktop":10,"paddingLink":false,"variationSelected":true,"isBlockRootParent":true} -->
+<div class="wp-block-uagb-container uagb-block-376532dd alignfull uagb-is-root-container"><div class="uagb-container-inner-blocks-wrap"><!-- wp:uagb/advanced-heading {"block_id":"00ab6bf7","classMigrate":true,"headingDescToggle":false,"headingAlign":"center","headFontSize":32} -->
+<div class="wp-block-uagb-advanced-heading uagb-block-00ab6bf7"><h2 class="uagb-heading-text">Meet our Adoptable Dogs</h2></div>
+<!-- /wp:uagb/advanced-heading -->
+<!-- wp:uagb/post-carousel {"btnBorderStyle":"none","block_id":"d1aba95b","categories":"33","postsToShow":15,"displayPostDate":false,"displayPostComment":false,"hideTaxonomyIcon":false,"ctaText":"Adopt Me","rowGap":40,"pauseOnHover":false,"autoplaySpeed":3000} /--></div></div>
+<!-- /wp:uagb/container -->
+<!-- wp:html {"UAGResponsiveConditions":true} -->
+<div class="page-header">
+    <h2 class="section-heading">Upcoming Events</h2>
+</div>
+<div style="background-color: #f6f1e7; padding: 20px 0 50px 0;">
+    <div class="programs-grid events-two">
+
+        <!-- Starry Night
+        <div class="card">
+            <div class="card-image" style="background-image: url('https://toledospetbullproject.com/wp-content/uploads/2025/10/Starry-Night_3.jpg'); height: 250px;">
+            </div>
+            <div class="card-content">
+                <h3 class="card-title">Starry Night</h3>
+                <p style="font-weight: bold; color: #5A9B32; margin-bottom: 15px;">Sat, Oct 18 at The Pinnacle</p>
+                <p class="card-description">Enjoy an evening of dinner, a spectacular silent auction, and entertainment hosted by Lissa Guyton—all while supporting Toledo's PET Bull Project.</p>
+                <div style="margin-top: 20px;">
+                    <a href="/fundraising/" class="primary-btn">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+     -->
+<style>
+.events-two {
+    max-width: 700px;
+    margin: 0 auto;
+}
+@media (max-width: 768px) {
+    .events-two {
+        max-width: 98vw;
+        margin: 0 1vw;
+    }
+}
+</style>
+</div>
+<!-- /wp:html -->
+<!-- wp:uagb/container {"block_id":"d7156058","backgroundType":"color","backgroundColor":"#ffffff","topPaddingDesktop":10,"bottomPaddingDesktop":10,"leftPaddingDesktop":10,"rightPaddingDesktop":10,"variationSelected":true,"isBlockRootParent":true} -->
+<div id="tpbp-calendar" class="wp-block-uagb-container uagb-block-d7156058 alignfull uagb-is-root-container"><div class="uagb-container-inner-blocks-wrap"><!-- wp:html -->
+<iframe src="https://calendar.google.com/calendar/embed?src=toledospetbullproject%40gmail.com&ctz=America%2FNew_York" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+<!-- /wp:html --></div></div>
+<!-- /wp:uagb/container -->
+<!-- wp:uagb/container {"block_id":"0b6c1445","innerContentCustomWidthDesktop":619,"backgroundType":"color","backgroundColor":"#f6f1e7","variationSelected":true,"isBlockRootParent":true} -->
+<div class="wp-block-uagb-container uagb-block-0b6c1445 alignfull uagb-is-root-container"><div class="uagb-container-inner-blocks-wrap"><!-- wp:uagb/advanced-heading {"block_id":"6c04e27b","classMigrate":true,"headingDescToggle":false,"headingTag":"h3"} -->
+<div class="wp-block-uagb-advanced-heading uagb-block-6c04e27b"><h3 class="uagb-heading-text">Learn Pet CPR &amp; First Aid — Save $10</h3></div>
+<!-- /wp:uagb/advanced-heading -->
+<!-- wp:paragraph -->
+<p>Get nationally recognized, self-paced courses from Pet Emergency Academy. Use our promo code <strong>TOLEDOSPETBULLPROJECT</strong> to <strong>save $10</strong>—and they'll donate <strong>$10 back</strong> to support Toledo's PET Bull Project.</p>
+<!-- /wp:paragraph -->
+<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
+<div class="wp-block-buttons"><!-- wp:button -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="http://www.petemergencyacademy.com/">Register for a Course</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons -->
+<!-- wp:paragraph -->
+<p><br><strong>Note</strong>: Discount applies only to on-demand, self-paced courses (not valid for live or Zoom trainings).</p>
+<!-- /wp:paragraph --></div></div>
+<!-- /wp:uagb/container -->
+<!-- wp:html -->
+<!-- Partner Logos Section -->
+<div class="page-header">
+    <h2 class="section-heading">Thank you to our partners!</h2>
+</div>
+<div style="background-color: #fff; padding: 40px 20px;">
+    <div class="partner-logos-container" style="width: 100%; max-width: none; padding: 0;">
+        <div class="partner-logos-grid">
+            <!-- West Suburban Animal Hospital -->
+            <div class="partner-logo">
+                <a href="https://westsuburbananimalhospital.com" target="_blank" rel="noopener">
+                    <img src="https://westsuburbananimalhospital.com/wp-content/uploads/2022/01/West-Suburban_Logo_dark-blue_h_376x120.png"
+                         alt="West Suburban Animal Hospital"
+                         title="West Suburban Animal Hospital">
+                </a>
+            </div>
+            <!-- West Toledo Animal Hospital -->
+            <div class="partner-logo">
+                <a href="https://www.westtoledoanimalhospital.com" target="_blank" rel="noopener">
+                    <img src="https://le-cdn.hibuwebsites.com/9e44d5a6fcb349cdabe9e36a77c6f0e4/dms3rep/multi/opt/PAH-barn-logo-1920w.png"
+                         alt="West Toledo Animal Hospital"
+                         title="West Toledo Animal Hospital">
+                </a>
+            </div>
+            <!-- Open Oaks Grooming -->
+            <div class="partner-logo">
+                <a href="https://www.facebook.com/openoaksgrooming/" target="_blank" rel="noopener">
+                    <img src="https://scontent-ord5-3.xx.fbcdn.net/v/t39.30808-6/301514534_771792610911120_5854637311991819388_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=w4_J11Szve4Q7kNvwFZTpUO&_nc_oc=AdkGP7smypgufnfBtpxIn-QJq1lE7qzEE5W3ltoLdRWAVnbThPekN_tmBYBhrRon0nNnQ3hwKyoIWnwBSRyEkGwJ&_nc_zt=23&_nc_ht=scontent-ord5-3.xx&_nc_gid=T5KjW5NFivBkIyjCC-JxQA&oh=00_Aff-5PFkm3XnKfcNX1U91A3ALBem6u2peMo-57nqCFH2Tw&oe=68E86CAE"
+                         alt="Open Oaks Grooming"
+                         title="Open Oaks Grooming">
+                </a>
+            </div>
+            <!-- Namho Enterprises -->
+            <div class="partner-logo">
+                <a href="https://namhoenterprises.com/" target="_blank" rel="noopener">
+                    <img src="https://namhoenterprises.com/wp-content/uploads/2023/03/logo-2-1.png"
+                         alt="Namho Enterprises"
+                         title="Namho Enterprises">
+                </a>
+            </div>
+            <!-- Ready Set Train Dogs -->
+            <div class="partner-logo">
+                <a href="https://www.readysettraindogs.com" target="_blank" rel="noopener">
+                    <img src="https://static.wixstatic.com/media/59490a_63c0ee4d50d14d66bff88a5ed8e52c84~mv2.png/v1/fill/w_932,h_888,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/ReadySetTrain(webtransparent)%20(1).png"
+                         alt="Ready Set Train Dogs"
+                         title="Ready Set Train Dogs">
+                </a>
+            </div>
+            <!-- Pet Fanatics -->
+            <div class="partner-logo">
+                <img src="https://toledospetbullproject.com/wp-content/uploads/2025/10/petfanatics.jpg"
+                     alt="Pet Fanatics"
+                     title="Partner">
+            </div>
+            <!-- Petco Love -->
+            <div class="partner-logo">
+                <a href="https://petcolove.org" target="_blank" rel="noopener">
+                    <img src="https://d1xo1ei89o6wi.cloudfront.net/assets/org/org-logo-standard.svg?width=640&format=webp"
+                         alt="Petco Love"
+                         title="Petco Love">
+                </a>
+            </div>
+            <!-- Ohio Pet Fund -->
+            <div class="partner-logo">
+                <a href="https://ohiopetfund.org" target="_blank" rel="noopener">
+                    <img src="https://img1.wsimg.com/isteam/ip/e791904e-527a-4ea6-b977-4c42c054ba54/OPF%202022%20cartoon%20OOO.jpg/:/rs=w:2320,h:1165"
+                         alt="Ohio Pet Fund"
+                         title="Ohio Pet Fund">
+                </a>
+            </div>
+            <!-- Pet Emergency Academy -->
+            <div class="partner-logo">
+                <a href="https://www.petemergencyacademy.com" target="_blank" rel="noopener">
+                    <img src="https://www.petemergencyacademy.com/wp-content/uploads/2024/03/cropped-cropped-academy-new-logo-300x279.webp"
+                         alt="Pet Emergency Academy"
+                         title="Pet Emergency Academy">
+                </a>
+            </div>
+            <!-- Buckeye Broadband -->
+            <div class="partner-logo">
+                <a href="https://www.buckeyebroadband.com" target="_blank" rel="noopener">
+                    <img src="https://www.buckeyebroadband.com/themes/custom/buckeyebb_bs/images/logo.png"
+                        alt="Buckeye Broadband"
+                        title="Buckeye Broadband">
+            </div>
+            <!-- Latham Foundation -->
+            <div class="partner-logo">
+                <a href="https://www.latham.org" target="_blank" rel="noopener">
+                    <img src="https://www.latham.org/wp-content/uploads/2018/06/logo-2.png"
+                         alt="Latham Foundation"
+                         title="Latham Foundation">
+                </a>
+            </div>
+            <!-- BISSELL Pet Foundation -->
+            <div class="partner-logo">
+                <a href="https://www.bissellpetfoundation.org" target="_blank" rel="noopener">
+                    <img src="https://toledospetbullproject.com/wp-content/uploads/2025/09/BPF_Logo-1.png"
+                         alt="BISSELL Pet Foundation"
+                         title="BISSELL Pet Foundation">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+.partner-logos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 32px;
+    align-items: center;
+    justify-items: center;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+.partner-logo {
+    background: none;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
+    transition: none;
+    width: auto;
+    max-width: none;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.partner-logo img {
+    height: 160px;
+    object-fit: contain;
+    width: auto;
+    max-width: 320px;
+    padding: 10px 10px;
+    transition: opacity 0.3s ease;
+}
+/* Add extra margin to Buckeye Broadband and Latham logos to prevent overlap */
+.partner-logo img[alt="Buckeye Broadband"] {
+    margin-right: 3px;
+}
+.partner-logo:hover img {
+    opacity: 0.9;
+}
+.partner-logo a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+@media (max-width: 768px) {
+    .partner-logos-grid {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 6px;
+    }
+    .partner-logo img {
+        height: 90px;
+        max-width: 140px;
+        padding: 6px 2px;
+    }
+}
+@media (max-width: 480px) {
+    .partner-logos-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 6px;
+    }
+    .partner-logo img {
+        height: 60px;
+        max-width: 80px;
+        padding: 2px 1px;
+    }
+}
+</style>
+<!-- /wp:html -->
