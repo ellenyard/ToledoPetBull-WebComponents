@@ -92,3 +92,13 @@ add_action( 'wp_enqueue_scripts', 'dequeue_beaver_assets_on_non_bb_pages', 100 )
 /**
  * Add your custom functions below this line
  */
+
+/**
+ * Display Return Policy link on Shop and Cart pages
+ */
+function tpbp_return_policy_link() {
+    echo '<div style="text-align:center; padding: 20px 0; margin-top: 20px;">';
+    echo '<p>Please review our <a href="/return-policy/" style="font-weight:600;">Return Policy</a> before completing your purchase.</p>';
+    echo '</div>';
+}
+add_action( 'woocommerce_after_shop_loop', 'tpbp_return_policy_link', 20 );
