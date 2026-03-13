@@ -1098,6 +1098,10 @@ html {
 .single-tribe_events .tribe-events-nav-pagination {
     display: none !important;
 }
+/* Hide date on One-on-One Training event (no fixed date — scheduled after purchase) */
+.postid-16618 .tribe-events-schedule .tribe-event-date-start {
+    display: none !important;
+}
 /* --- Ticket form styling --- */
 .single-tribe_events .tribe-tickets__tickets-form {
     background: white !important;
