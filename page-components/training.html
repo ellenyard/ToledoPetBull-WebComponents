@@ -1,73 +1,87 @@
 <!-- wp:html -->
-<div class="training-header" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; margin-bottom: 40px; padding: 20px; background: white; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
-    <div>
-        <h1 style="color: #222222; margin-bottom: 15px;">Dog Training Classes in Toledo</h1>
-        <p style="color: #333333; margin-bottom: 20px;">Professional, affordable training for dogs of all breeds and ages.</p>
-        <button class="cta-btn" onclick="window.location.href='https://toledospetbullproject.com/events/'">See Upcoming Classes</button>
-    </div>
-    <div class="header-image">
-        <img src="https://toledospetbullproject.com/wp-content/uploads/2026/02/traomomg-age-scaled.jpg" alt="A young woman training a dog during a class at Toledo's PET Bull Project" style="width: 100%; border-radius: 10px;">
+<div class="training-header" style="margin-bottom: 40px; padding: 20px; background: white; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); text-align: center;">
+    <h1 style="color: #222222; margin-bottom: 15px;">Dog Training Classes in Toledo</h1>
+    <p style="color: #333333; margin-bottom: 20px;">Professional, affordable training for dogs of all breeds and ages.</p>
+</div>
+
+<div class="info-box">
+    <strong>What to Expect:</strong> We use positive, reward-based methods that are effective and fun for both dogs and their families! All classes are held at <a href="https://maps.app.goo.gl/sLX43PmQdY32smhWA">Toledo's PETBull Project</a>. The date listed is the first week of each multi-week class. Before registering, please review our <a href="https://toledospetbullproject.com/training-class-policies/">Training Class Policies</a>.
+</div>
+
+<!-- Puppy Class Card (standalone above progression) -->
+<div style="max-width: 500px; margin: 0 auto 30px auto;">
+    <div class="card" id="TPBP-Puppy">
+        <div class="card-image" style="background-image: url('https://toledospetbullproject.com/wp-content/uploads/2025/04/rsw_480.jpg');"></div>
+        <div class="card-content">
+            <h3 class="card-title">Puppy Socialization</h3>
+            <p class="card-description"><strong>$80 | 5-week series</strong><br>Set your puppy up for a lifetime of success through positive socialization and essential training.</p>
+            <div class="card-highlights">
+                <strong>Perfect for:</strong> Puppies 8-20 weeks old. First class is for humans only!
+            </div>
+            <div class="action-buttons">
+                <button class="expand-btn" onclick="toggleDetails('puppy-details')">Learn More</button>
+                <button class="primary-btn" onclick="window.location.href='https://toledospetbullproject.com/events/category/puppy-socialization/'">Register Now</button>
+            </div>
+            <div id="puppy-details" class="card-details" style="display: none;">
+                <ul class="details-list">
+                    <li>Build confidence through positive socialization with other puppies, people, and new experiences</li>
+                    <li>Learn how to handle common puppy behaviors like potty training, teething, and chewing</li>
+                    <li>Practice essential cues such as sit, down, come, and loose leash walking</li>
+                    <li>Develop focus and self-control through fun and engaging activities</li>
+                </ul>
+                <div class="schedule-preview">
+                    <strong>Upcoming Classes:</strong> <br> March 25 at 6:30p (Wednesdays) <br> May 6 at 6:30p (Wednesdays)
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
+<!-- Class Progression Diagram -->
+<div class="progression-container" style="background: white; border-radius: 10px; padding: 30px; margin-bottom: 30px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+    <h3 style="text-align: center; color: #222; margin-bottom: 25px; font-size: 1.5em;">Good Manners Class Progression</h3>
+
+    <div class="progression-track" style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 15px;">
+        <a href="#TPBP-GM1" class="progression-step" style="background: #7AC142; color: white; padding: 18px 24px; border-radius: 10px; text-align: center; font-weight: bold; font-size: 1.2em; text-decoration: none; cursor: pointer;">
+            GM1<br><span style="font-weight: normal; font-size: 15px;">Foundations</span>
+        </a>
+        <div class="progression-arrow" style="color: #7AC142; font-size: 32px;">&rarr;</div>
+        <a href="#TPBP-GM2" class="progression-step" style="background: #7AC142; color: white; padding: 18px 24px; border-radius: 10px; text-align: center; font-weight: bold; font-size: 1.2em; text-decoration: none; cursor: pointer;">
+            GM2<br><span style="font-weight: normal; font-size: 15px;">Smart Dog</span>
+        </a>
+        <div class="progression-arrow" style="color: #7AC142; font-size: 32px;">&rarr;</div>
+        <a href="#TPBP-GM3" class="progression-step" style="background: #7AC142; color: white; padding: 18px 24px; border-radius: 10px; text-align: center; font-weight: bold; font-size: 1.2em; text-decoration: none; cursor: pointer;">
+            GM3<br><span style="font-weight: normal; font-size: 15px;">Advanced Skills</span>
+        </a>
+        <div class="progression-arrow" style="color: #7AC142; font-size: 32px;">&rarr;</div>
+        <a href="#TPBP-GM4" class="progression-step" style="background: #7AC142; color: white; padding: 18px 24px; border-radius: 10px; text-align: center; font-weight: bold; font-size: 1.2em; text-decoration: none; cursor: pointer;">
+            GM4<br><span style="font-weight: normal; font-size: 15px;">Real Life Skills</span>
+        </a>
+    </div>
+
+    <p style="text-align: center; color: #666; font-size: 14px; margin-top: 20px; margin-bottom: 0;">Classes must be taken in order. Each level builds on the skills learned in the previous class.</p>
+</div>
+
 <style>
-@media (max-width: 768px) {
-    .training-header {
-        grid-template-columns: 1fr !important;
-        text-align: center;
+@media (max-width: 600px) {
+    .progression-track {
+        flex-direction: column !important;
     }
-    .header-image {
-        display: none !important;
+    .progression-arrow {
+        transform: rotate(90deg);
     }
 }
 </style>
 
-
-<div class="info-box">
-    <strong>What to Expect:</strong> We use positive, reward-based methods that are effective and fun for both dogs and their families! All classes are held at <a href="https://maps.app.goo.gl/sLX43PmQdY32smhWA">Toledo's PETBull Project</a>. The date listed is the first week of each multi-week class.
-</div>
-
-<div class="info-box" style="background: #FFF8E1; border-left: 4px solid #F9A825;">
-    <strong>Training Class Policies:</strong> Before registering, please review our <a href="https://toledospetbullproject.com/training-class-policies/">Training Class Policies</a>.
-</div>
-
 <div class="container">
     <div class="programs-grid">
-        <!-- Puppy Class Card -->
-        <div class="card"  id="TPBP-Puppy">
-            <div class="card-image" style="background-image: url('https://toledospetbullproject.com/wp-content/uploads/2025/04/rsw_480.jpg');">
-             </div>
-            <div class="card-content">
-                <h3 class="card-title">Puppy Socialization</h3>
-                <p class="card-description"><strong>$80 | 5-week series</strong><br>Set your puppy up for a lifetime of success through positive socialization and essential training.</p>
-                <div class="card-highlights">
-                    <strong>Perfect for:</strong> Puppies 8-20 weeks old. First class is for humans only!
-                </div>
-                <div class="action-buttons">
-                    <button class="expand-btn" onclick="toggleDetails('puppy-details')">Learn More</button>
-                    <button class="primary-btn" onclick="window.location.href='https://toledospetbullproject.com/events/category/puppy-socialization/'">Register Now</button>
-                </div>
-                <div id="puppy-details" class="card-details" style="display: none;">
-                    <ul class="details-list">
-                        <li>Build confidence through positive socialization with other puppies, people, and new experiences</li>
-                        <li>Learn how to handle common puppy behaviors like potty training, teething, and chewing</li>
-                        <li>Practice essential cues such as sit, down, come, and loose leash walking</li>
-                        <li>Develop focus and self-control through fun and engaging activities</li>
-                    </ul>
-                    <div class="schedule-preview">
-                        <strong>Next Class:</strong> TBD
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <!-- Good Manners 1 Card -->
         <div class="card" id="TPBP-GM1">
             <div class="card-image" style="background-image: url('https://toledospetbullproject.com/wp-content/uploads/2025/04/crt_025_2.jpg');">
             </div>
             <div class="card-content">
-                <h3 class="card-title">Good Manners 1</h3>
-                <p class="card-description"><strong>$80 | 5-week series</strong><br>Bring out the best in your dog! Perfect for all dogs looking to learn basic manners and life skills.</p>
+                <h3 class="card-title">Good Manners 1: Foundations</h3>
+                <p class="card-description"><strong>$80 | 5-week series</strong><br>Build the foundation skills every dog needs while learning how to communicate clearly and train effectively.</p>
                 <div class="card-highlights">
                     <strong>Note:</strong> First session is for humans only. Not suitable for dogs with aggression or reactivity.
                 </div>
@@ -76,14 +90,18 @@
                     <button class="primary-btn" onclick="window.location.href='https://toledospetbullproject.com/events/category/good-manners-class/'">Register Now</button>
                 </div>
                 <div id="gm1-details" class="card-details" style="display: none;">
+                    <p style="margin-bottom: 12px;">Dogs and handlers learn the basic behaviors that create a polite and responsive companion.</p>
                     <ul class="details-list">
-                        <li>Teach calm behavior at home and in public</li>
-                        <li>Build focus and self-control, even around distractions</li>
-                        <li>Improve leash skills, recall, and polite greetings</li>
-                        <li>Curb nuisance behaviors like barking, jumping, and door-dashing</li>
+                        <li>Name recognition and attention to handler</li>
+                        <li>Sit and down</li>
+                        <li>Stay</li>
+                        <li>Beginning loose leash walking</li>
+                        <li>Beginner recall (coming when called)</li>
+                        <li>Polite greetings introduction</li>
                     </ul>
+                    <p style="margin-top: 12px;"><strong>Focus:</strong> Building strong engagement, communication, and basic manners that prepare dogs for the next level of training.</p>
                     <div class="schedule-preview">
-                        <strong>Upcoming Classes:</strong> <br> Mar 22 at 1p (Sundays) <br> Mar 30 at 6:30p (Mondays) <br> Apr 11 at 11:30a (Saturdays) <br> May 3 at 1p (Sundays) <br> May 11 at 6:30p (Mondays) <br> May 23 at 11:30a (Saturdays)
+                        <strong>Upcoming Classes:</strong> <br> March 30 at 6:30p (Mondays) <br> April 11 at 11:30a (Saturdays) <br> May 6 at 6:30p (Wednesdays) <br> May 11 at 6:30p (Mondays) <br> May 23 at 11:30a (Saturdays)
                     </div>
                 </div>
             </div>
@@ -94,26 +112,91 @@
             <div class="card-image" style="background-image: url('https://toledospetbullproject.com/wp-content/uploads/2025/04/Group-1321317540.png');">
             </div>
             <div class="card-content">
-                <h3 class="card-title">Good Manners 2</h3>
-                <p class="card-description"><strong>$80 | 4-week series</strong><br>Advanced training with real-world distractions. Great preparation for the Canine Good Citizen test.</p>
+                <h3 class="card-title">Good Manners 2: Smart Dog</h3>
+                <p class="card-description"><strong>$80 | 4-week series</strong><br>Build your dog's focus, confidence, and impulse control through fun training games and problem-solving activities.</p>
                 <div class="card-highlights">
-                    <strong>Prerequisites:</strong> Completion of Good Manners 1 or trainer approval required.
+                    <strong>Prerequisites:</strong> Completion of Good Manners 1 required.
                 </div>
                 <div class="action-buttons">
                     <button class="expand-btn" onclick="toggleDetails('gm2-details')">Learn More</button>
                     <button class="primary-btn" onclick="window.location.href='https://toledospetbullproject.com/events/category/good-manners-ii-class/'">Register Now</button>
                 </div>
                 <div id="gm2-details" class="card-details" style="display: none;">
+                    <p style="margin-bottom: 12px;">Dogs practice their foundation behaviors while learning to think, focus on their handler, and work through new challenges.</p>
                     <ul class="details-list">
-                        <li>Leash skills in real-life settings, including group walks and outdoor practice</li>
-                        <li>Reliable recall, even around other dogs or distractions</li>
-                        <li>Distance commands, like sit, down, and stay from afar</li>
-                        <li>Impulse control, helping your dog resist temptation</li>
-                        <li>Focus and engagement, so your dog looks to you even when the world is exciting</li>
-                        <li>Distraction training, for better behavior around noise, people, and dogs</li>
+                        <li>Focus and engagement games</li>
+                        <li>Recall games that strengthen coming when called</li>
+                        <li>Loose leash walking games</li>
+                        <li>Impulse control exercises</li>
+                        <li>Place or settle on a mat</li>
+                        <li>Beginner scent and problem-solving games</li>
                     </ul>
+                    <p style="margin-top: 12px;"><strong>Focus:</strong> Building a dog that thinks, listens, and stays connected to their handler, even with distractions.</p>
                     <div class="schedule-preview">
-                        <strong>Next Class:</strong> Check back soon!
+                        <strong>Upcoming Classes:</strong> <br> March 29 at 1p (Sundays) <br> May 3 at 1p (Sundays) <br> May 23 at 11:30a (Saturdays)
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Good Manners 3 Card -->
+        <div class="card" id="TPBP-GM3">
+            <div class="card-image" style="background-image: url('https://toledospetbullproject.com/wp-content/uploads/2025/04/crt_025_2.jpg');">
+            </div>
+            <div class="card-content">
+                <h3 class="card-title">Good Manners 3: Advanced Skills</h3>
+                <p class="card-description"><strong>$80 | 4-week series</strong><br>Strengthen the skills learned in earlier classes, helping your dog respond consistently even with distractions.</p>
+                <div class="card-highlights">
+                    <strong>Prerequisites:</strong> Completion of Good Manners 2 required.
+                </div>
+                <div class="action-buttons">
+                    <button class="expand-btn" onclick="toggleDetails('gm3-details')">Learn More</button>
+                    <button class="primary-btn" onclick="window.location.href='https://toledospetbullproject.com/events/category/good-manners-class/'">Register Now</button>
+                </div>
+                <div id="gm3-details" class="card-details" style="display: none;">
+                    <p style="margin-bottom: 12px;">We build on your dog's foundation and begin practicing behaviors with greater duration, distance, and real-world challenges.</p>
+                    <ul class="details-list">
+                        <li>Longer sit, down, and stay</li>
+                        <li>Loose leash walking with distractions</li>
+                        <li>Stronger recall (coming when called)</li>
+                        <li>Leave it with real temptations</li>
+                        <li>Polite greetings with people</li>
+                    </ul>
+                    <p style="margin-top: 12px;"><strong>Focus:</strong> Building reliability through duration, distance, and distractions.</p>
+                    <div class="schedule-preview">
+                        <strong>Upcoming Classes:</strong> <br> Jun 7 at 1p (Sundays)
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Good Manners 4 Card -->
+        <div class="card" id="TPBP-GM4">
+            <div class="card-image" style="background-image: url('https://toledospetbullproject.com/wp-content/uploads/2025/04/Group-1321317540.png');">
+            </div>
+            <div class="card-content">
+                <h3 class="card-title">Good Manners 4: Real Life Skills</h3>
+                <p class="card-description"><strong>$80 | 4-week series</strong><br>Apply your training to everyday situations with practical, real-world practice.</p>
+                <div class="card-highlights">
+                    <strong>Prerequisites:</strong> Completion of Good Manners 3 required.
+                </div>
+                <div class="action-buttons">
+                    <button class="expand-btn" onclick="toggleDetails('gm4-details')">Learn More</button>
+                    <button class="primary-btn" onclick="window.location.href='https://toledospetbullproject.com/events/category/good-manners-class/'">Register Now</button>
+                </div>
+                <div id="gm4-details" class="card-details" style="display: none;">
+                    <p style="margin-bottom: 12px;">Dogs learn to apply their training to everyday situations and real-world challenges.</p>
+                    <ul class="details-list">
+                        <li>Walking past other dogs</li>
+                        <li>Greeting people politely</li>
+                        <li>Relaxing in public</li>
+                        <li>Ignoring food and distractions</li>
+                        <li>Longer stays</li>
+                        <li>Recall around real-life challenges</li>
+                    </ul>
+                    <p style="margin-top: 12px;"><strong>Focus:</strong> Real-world situations.</p>
+                    <div class="schedule-preview">
+                        <strong>Upcoming Classes:</strong> <br> Check back soon for upcoming dates!
                     </div>
                 </div>
             </div>

@@ -1,20 +1,233 @@
-<!-- wp:fl-builder/layout -->
+<!-- wp:html -->
+<style>
+/* Volunteer Page - Only page-specific styles */
+.toledo-volunteer {
+    line-height: 1.6;
+    color: #333333;
+}
 
-		<h1>
-			Volunteer
-		</h1>
-			<p><strong>Are you looking for a way to make a difference in your community?</strong>Toledo's PET Bull Project relies on dedicated volunteers to help make a difference. Not sure where you will fit in? Don't worry; we have volunteer orientations for all of our programs, and we'll help you identify which program is best for you.<strong>Our commitment to you...</strong>As an organization made up entirely of volunteers, we understand the impact that dedicated people have on a successful non-profit organization. We are committed to making sure you have the best possible experience. Click on Volunteer Alignment below to learn about some of our program volunteer opportunities.</p>		
-			<a href="/wp-content/uploads/2025/04/VolunteerAlignment.pdf" target="_self">
-						Volunteer Alignment
-					</a>
-									<img src="https://toledospetbullproject.com/wp-content/uploads/2025/04/Group-5-13.png" alt="Three people sorting clothes in a room filled with bins containing various garments and items." itemprop="image" height="1164" width="1273" srcset="https://toledospetbullproject.com/wp-content/uploads/2025/04/Group-5-13.png 1273w, https://toledospetbullproject.com/wp-content/uploads/2025/04/Group-5-13-300x274.png 300w, https://toledospetbullproject.com/wp-content/uploads/2025/04/Group-5-13-1024x936.png 1024w, https://toledospetbullproject.com/wp-content/uploads/2025/04/Group-5-13-768x702.png 768w, https://toledospetbullproject.com/wp-content/uploads/2025/04/Group-5-13-600x549.png 600w, https://toledospetbullproject.com/wp-content/uploads/2025/04/Group-5-13-64x59.png 64w, https://toledospetbullproject.com/wp-content/uploads/2025/04/Group-5-13-100x91.png 100w" sizes="(max-width: 1273px) 100vw, 1273px" title="Three people sorting clothes in a room filled with bins containing various garments and items." onerror="this.style.display='none'"  />
-									<img src="https://toledospetbullproject.com/wp-content/uploads/2025/04/Group-5-16.png" alt="A group of people posing in front of a vehicle, wearing purple and green t-shirts with a bull graphic." itemprop="image" height="1164" width="1273" srcset="https://toledospetbullproject.com/wp-content/uploads/2025/04/Group-5-16.png 1273w, https://toledospetbullproject.com/wp-content/uploads/2025/04/Group-5-16-300x274.png 300w, https://toledospetbullproject.com/wp-content/uploads/2025/04/Group-5-16-1024x936.png 1024w, https://toledospetbullproject.com/wp-content/uploads/2025/04/Group-5-16-768x702.png 768w, https://toledospetbullproject.com/wp-content/uploads/2025/04/Group-5-16-600x549.png 600w, https://toledospetbullproject.com/wp-content/uploads/2025/04/Group-5-16-64x59.png 64w, https://toledospetbullproject.com/wp-content/uploads/2025/04/Group-5-16-100x91.png 100w" sizes="(max-width: 1273px) 100vw, 1273px" title="A group of people posing in front of a vehicle, wearing purple and green t-shirts with a bull graphic." onerror="this.style.display='none'"  />
-		<h2>
-			Steps to Become a Volunteer
-		</h2>
-	<p>Becoming a volunteer is simple! Just follow the steps below. You'll learn about all of the programs Toledo's Pet Bull Project offers to the community, and then you can decide what programs interest you. Once you've completed the steps below, our volunteer coordinator will reach out  with information about how to get started. We can't wait to have you become a member of our team!</p>
-<ol>	<li>
-			 <ol><li>Complete the <a href="https://toledospetbullproject.com/volunteer-application/" target="_blank" rel="noopener">volunteer application</a></li><li>Watch the <a href="https://toledospetbullproject.com/volunteer-orientation/" target="_blank" rel="noopener">orientation video</a> and take the quiz</li><li>Review our <a href="https://toledospetbullproject.com/volunteer-forms/" target="_blank" rel="noopener">Code of Conduct</a> and sign the forms</li><li>Watch the <a href="https://toledospetbullproject.com/volunteer-pet-safety/" target="_blank" rel="noopener">pet safety video</a> and take the quiz</li><li>Complete the <a href="https://toledospetbullproject.com/volunteer-final-evaluation/" target="_blank" rel="noopener">final evaluation</a></li></ol>		
-	</li>
-	</ol>
-<!-- /wp:fl-builder/layout -->
+/* Hero split layout */
+.volunteer-hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.volunteer-hero-text h1 {
+    color: #222222;
+    margin-bottom: 15px;
+}
+
+.volunteer-hero-text p {
+    color: #333333;
+    margin-bottom: 15px;
+}
+
+.volunteer-hero-image {
+    position: relative;
+}
+
+.volunteer-hero-image img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+/* Portal callout box */
+.portal-callout {
+    background: white;
+    border-radius: 15px;
+    padding: 30px 35px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    border-left: 6px solid #7AC142;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.portal-callout-icon {
+    font-size: 2.5rem;
+    flex-shrink: 0;
+}
+
+.portal-callout-content h3 {
+    color: #222222;
+    margin-bottom: 8px;
+}
+
+.portal-callout-content p {
+    color: #333333;
+    margin-bottom: 15px;
+}
+
+/* Step tracker */
+.steps-section {
+    margin-bottom: 40px;
+}
+
+.steps-section h2 {
+    color: #222222;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.steps-section > p {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+    color: #333333;
+}
+
+.steps-track {
+    display: flex;
+    gap: 0;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+
+.step-card {
+    background: white;
+    border-radius: 12px;
+    padding: 25px 20px;
+    text-align: center;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    border: 1px solid #E0E0E0;
+    flex: 1;
+    min-width: 180px;
+    max-width: 220px;
+    position: relative;
+}
+
+.step-number {
+    width: 44px;
+    height: 44px;
+    background: #7AC142;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 0 auto 12px auto;
+}
+
+.step-card h4 {
+    color: #222222;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.step-card a {
+    color: #5A9B32;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.step-card a:hover {
+    color: #7AC142;
+    text-decoration: underline;
+}
+
+.step-arrow {
+    display: flex;
+    align-items: center;
+    color: #7AC142;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 0 6px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .volunteer-hero {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .portal-callout {
+        flex-direction: column;
+        text-align: center;
+        padding: 25px;
+    }
+
+    .steps-track {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .step-card {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .step-arrow {
+        transform: rotate(90deg);
+        padding: 4px 0;
+    }
+
+}
+</style>
+
+<div class="toledo-volunteer">
+
+    <!-- Current Volunteer Portal Callout -->
+    <div class="portal-callout">
+        <div class="portal-callout-icon">&#x1F43E;</div>
+        <div class="portal-callout-content">
+            <h3>Already Part of the Team?</h3>
+            <p>Access volunteer resources, find upcoming opportunities, and sign up for events on our Volunteer Portal.</p>
+            <button class="primary-btn" onclick="window.open('https://tpbp.odoo.com', '_blank')">Go to the Volunteer Portal</button>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="volunteer-hero">
+        <div class="volunteer-hero-text">
+            <h1>Volunteer</h1>
+            <p>Toledo's PET Bull Project relies on dedicated volunteers like you. Our work spans dog training classes, youth education programs, community vaccine clinics, foster support, and adoption events. Whether you want to work hands-on with dogs or help behind the scenes, there's a place for you here.</p>
+        </div>
+        <div class="volunteer-hero-image">
+            <img src="https://toledospetbullproject.com/wp-content/uploads/2025/05/F54C9D76-40FC-4492-8147-69ACD9C54EC2.jpeg" alt="A large group of TPBP volunteers in purple and green shirts posing together in front of the TPBP van.">
+        </div>
+    </div>
+
+    <!-- Steps to Become a Volunteer -->
+    <div class="steps-section">
+        <h2>Steps to Become a Volunteer</h2>
+        <p>Complete these five steps and our volunteer coordinator will reach out to get you started.</p>
+
+        <div class="steps-track">
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <h4><a href="https://toledospetbullproject.com/volunteer-application/" target="_blank">Volunteer Application</a></h4>
+            </div>
+            <div class="step-arrow">&rarr;</div>
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <h4><a href="https://toledospetbullproject.com/volunteer-orientation/" target="_blank">Orientation Video &amp; Quiz</a></h4>
+            </div>
+            <div class="step-arrow">&rarr;</div>
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <h4><a href="https://toledospetbullproject.com/volunteer-forms/" target="_blank">Code of Conduct &amp; Forms</a></h4>
+            </div>
+            <div class="step-arrow">&rarr;</div>
+            <div class="step-card">
+                <div class="step-number">4</div>
+                <h4><a href="https://toledospetbullproject.com/volunteer-pet-safety/" target="_blank">Pet Safety Video &amp; Quiz</a></h4>
+            </div>
+            <div class="step-arrow">&rarr;</div>
+            <div class="step-card">
+                <div class="step-number">5</div>
+                <h4><a href="https://toledospetbullproject.com/volunteer-final-evaluation/" target="_blank">Final Evaluation</a></h4>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- /wp:html -->

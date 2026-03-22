@@ -1,0 +1,124 @@
+<!-- wp:html -->
+<style>
+/* Foster Page - Only page-specific styles */
+.toledo-foster {
+    line-height: 1.6;
+    color: #333333;
+}
+
+/* Hero split layout */
+.foster-hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.foster-hero-text h1 {
+    color: #222222;
+    margin-bottom: 15px;
+}
+
+.foster-hero-text p {
+    color: #333333;
+    margin-bottom: 15px;
+}
+
+.foster-hero-image img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+/* Portal callout box */
+.portal-callout {
+    background: white;
+    border-radius: 15px;
+    padding: 30px 35px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    border-left: 6px solid #7AC142;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.portal-callout-icon {
+    font-size: 2.5rem;
+    flex-shrink: 0;
+}
+
+.portal-callout-content h3 {
+    color: #222222;
+    margin-bottom: 8px;
+}
+
+.portal-callout-content p {
+    color: #333333;
+    margin-bottom: 15px;
+}
+
+/* Application section heading */
+.application-heading {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.application-heading h2 {
+    color: #222222;
+    margin-bottom: 10px;
+}
+
+.application-heading p {
+    color: #333333;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .foster-hero {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .portal-callout {
+        flex-direction: column;
+        text-align: center;
+        padding: 25px;
+    }
+}
+</style>
+
+<div class="toledo-foster">
+
+    <!-- Current Foster Portal Callout -->
+    <div class="portal-callout">
+        <div class="portal-callout-icon">&#x1F3E0;</div>
+        <div class="portal-callout-content">
+            <h3>Already Fostering With Us?</h3>
+            <p>Access foster resources and find upcoming adoption events on our Foster Portal.</p>
+            <button class="primary-btn" onclick="window.open('https://tpbp.odoo.com', '_blank')">Go to the Foster Portal</button>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="foster-hero">
+        <div class="foster-hero-text">
+            <h1>Foster</h1>
+            <p>Every dog in a foster home is one fewer euthanized in a shelter. Some dogs don't do well in shelter settings, and a home gives them the space to heal, grow, and find their forever family. We cover all medical costs and food. You provide the love.</p>
+            <p>There's nothing quite like watching a scared, shut-down dog turn into a confident member of a family. If that sounds like something you'd want to be part of, fill out the application below.</p>
+        </div>
+        <div class="foster-hero-image">
+            <img src="https://toledospetbullproject.com/wp-content/uploads/2025/09/Hero_Foster.jpg" alt="A foster family with two children and a black dog sitting together on a couch.">
+        </div>
+    </div>
+
+    <!-- Foster Application -->
+    <div class="application-heading">
+        <h2>Foster Application</h2>
+    </div>
+
+</div>
+<!-- /wp:html -->
+
+<!-- wp:gravityforms/form {"formId":"16","title":false,"description":false} /-->
